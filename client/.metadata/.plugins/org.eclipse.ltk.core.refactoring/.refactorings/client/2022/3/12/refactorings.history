@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;edu.kh.network.run.TCPRun&apos; to &apos;ClientRun&apos;&#x0D;&#x0A;- Original project: &apos;client&apos;&#x0D;&#x0A;- Original element: &apos;edu.kh.network.run.TCPRun&apos;&#x0D;&#x0A;- Renamed element: &apos;edu.kh.network.run.ClientRun&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TCPRun&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;edu.kh.network.run{TCPRun.java[TCPRun" matchStrategy="1" name="ClientRun" qualified="false" references="true" similarDeclarations="false" stamp="1647484725702" textual="false" version="1.0"/>
+</session>

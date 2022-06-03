@@ -1,0 +1,20 @@
+package edu.kh.network.model.service;
+
+import java.net.Socket;
+
+public class TCPClient {
+
+	public void clientStart() {
+		
+		String serverIP = "58.76.162.124";
+		//127.0.0.1 loopback ip
+		
+		int port = 7857;
+		
+		Socket clientSocket = null;
+		
+		
+	}
+	
+	
+}
