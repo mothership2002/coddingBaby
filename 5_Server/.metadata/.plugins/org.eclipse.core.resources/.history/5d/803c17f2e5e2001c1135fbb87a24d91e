@@ -1,0 +1,18 @@
+package edu.kh.test.user.model.dao;
+
+import static edu.kh.test.common.JDBCTemplate.*;
+
+import java.sql.Connection;
+import java.util.List;
+
+import edu.kh.test.user.model.vo.User;
+
+public class UserDAO {
+
+	public List<User> searchUser(Connection conn, int userNo) throws Exception{
+		return null;
+	}
+
+	
+	
+}

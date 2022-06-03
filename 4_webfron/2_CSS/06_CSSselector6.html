@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_선택자 우선 순위</title>
+    <link rel="stylesheet" href="css/selector6.css">
+</head>
+<body>
+    <h1>CSS 선택자의 우선 순위</h1>
+    <pre>
+        default = style-tag desc 
+        but equal property 우선순위 발생
+
+        1) 동일한 우선 순위로 css 속성 설정 시
+
+        2) 여러 선택자를 이용해서 같은 요소를 선택하더라도
+            지정되는 css속성이 다르다면 모두 반영
+
+        1   css 속성 : 속성 값 !important; 
+        2   inline-style 속성 (요소에 직접 작성되는 style 속성)
+        3   #ID
+        4   .class
+        5   태그 선택자
+    </pre>
+                                        <!-- inline-style 입력 -->
+    <div class="cls1" id="test1" style ="background-color: pink;" >우선순위 테스트</div>
+
+
+
+</body>
+</html>

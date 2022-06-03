@@ -1,0 +1,5 @@
+package edu.kh.SemiProject.member.model.vo;
+
+public class Member {
+
+}

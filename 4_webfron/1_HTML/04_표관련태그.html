@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 반응형 웹 만들기를 위한  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_표 관련 태그</title>
+    
+    <style>
+        .tb3{
+            border: 3px solid black;
+            border-collapse: collapse;
+        }
+
+        .tb3 th, td{
+            border: 1px solid black;
+        }
+        
+        .tb3 thead{
+            background-color: yellowgreen;
+        }
+
+        .tb3 tbody{
+            background-color: yellow;
+        }
+
+        .tb3 tfoot{
+            background-color: orange;
+            text-align: center;
+            color : white;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>04_표 관련 태그</h1>
+    <pre>
+        <h3>table 태그</h3>
+        웹 문서에서 자료 정리를 위해 사용
+        행과 열로 이뤄짐 (cell)
+    </pre>
+    <pre>
+        <h3>tr 태그</h3>
+        Table Row 
+        한 행을 나타내는 태그
+    </pre>
+    <pre>
+        <h3>td 태그</h3>
+        Table Date 
+        한 셀을 나타내는 태그
+    </pre>
+    <pre>
+        <h3>th 태그</h3>
+        Table Header 
+        추가적으로 굵은 글씨, 가운데 정렬
+        기능은 td태그와 같음
+    </pre>
+    <pre>
+        <h3>caption 태그</h3>
+        Table caption for title or explanation
+    </pre>
+    <hr>
+    
+    <!--border = "1" : 1px black border table,td  -->
+    <table border="">
+        <caption style="color:gray">Kind of Signature Browser</caption>
+        <tr>
+            <th>Browser</th>
+            <th>Company</th>
+            <th>HyperLink</th>
+        </tr>
+        <tr>
+            <td>Chrome</td>
+            <td>Google</td>
+            <td>https://www.Google.com</td>
+        </tr>
+        <tr>
+            <td>Edge</td>
+            <td>MS</td>
+            <td>https://www.microsoft.com</td>
+        </tr>
+        <tr>
+            <td>FireFox</td>
+            <td>Mozila</td>
+            <td>https://www.Mozila.org</td>
+        </tr>
+        
+    </table>
+    <br>
+    <hr>
+
+    <h2>rowspan,colspan</h2>
+    <pre>
+        td 또는 th 태그에 작성
+        rowspan
+        colspan
+    </pre>
+
+    <table border="1">
+        <tr>
+            <th width="70" height="70">이름</th>
+            <th width="210">임동현</th>
+            <th width="140" rowspan="2">사진</th>
+        </tr>
+        <tr>
+            <th height="70">연락처</th>
+            <th>01025076939</th>
+        </tr>
+        <tr>
+            <th height="35">주소</th>
+            <th colspan="2">서울시 동작구 상도로 36길 23 401호</th>
+        </tr>
+        <tr>
+            <th height="140">자기 소개</th>
+            <td colspan="2">ㅎㅇ</td>
+        </tr>
+    </table>
+    <br>
+
+    <hr>
+
+
+
+    <h2>테이블 구조 설정 태그</h2>
+    <table class="tb3">
+        <thead>
+            <th>이름</th>
+            <th>나이</th>
+            <th>주소</th>
+        </thead>
+        <tbody>
+            <td>홍길동</td>
+            <td>20</td>
+            <td>서울시 구로구</td>
+        </tbody>
+        <tbody>
+            <td>김지석</td>
+            <td>30</td>
+            <td>서울시 금천구</td>
+        </tbody>
+        <tbody>
+            <td>박영희</td>
+            <td>25</td>
+            <td>경기도 부천시</td>
+        </tbody>
+        <tfoot>
+            <td colspan="2">총인원</td>
+            <td>3명</td>
+        </tfoot>
+        
+    </table>
+    <br>
+
+</body>
+</html>

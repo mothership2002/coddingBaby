@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> 08_레이아웃 스타일 2 </title>
+   <link rel="stylesheet" href="css/layout2.css">
+</head>
+<body>
+    <h1>요소의 여백 관련 속성</h1>
+    <pre>
+        html 요소는 4가지의 영역으로 구성
+
+        1) content
+        - 내용
+        2) padding
+        - content~border 여백 공간
+        3) border
+        - 내용 밖에서 감싸는 영역
+        4) margin
+        - 너가 알고 있는 그 마진
+    </pre>
+    <h3>기준</h3>
+    <div class="box">Content</div>
+    <hr>
+    <h3>Content area</h3>
+    <div class="box content">호호롤로로로</div>
+    <hr>
+    <h3>Border area</h3>
+    <div class="box border">호호롤로로로</div>
+    <hr>
+    <h3>Padding area</h3>
+    <div class="box content border padding">호호롤로로로</div>
+    <hr>
+    <h3>Margin area</h3>
+    <div class="box content border padding margin">호호롤로로로</div>
+    <div class="box content border padding margin" id="m1">호호롤로로로</div>
+    <hr>
+    <h3>left,right,top,bottom</h3>
+    <hr><br>
+    <h3>padding test</h3>
+    <div class="box padding-test">호룰룰루</div>
+    <hr>
+    <h3>border test</h3>
+    <div class="box border-test">호룰룰루</div>
+    <hr>
+    <h3>margin test</h3>
+    <div class="box margin-test">호룰룰루</div>
+    <hr>
+    <h3>margin auto</h3>
+    <div class="box margin-auto"> 호롤롤로</div>
+
+    <hr><hr><hr>
+    <h2>box sizing</h2>
+    <pre>
+        영역 중 화면에 보여지는 부분인 content, padding, border 들은 크기를 지정
+        전체적 크기를 파악하기 힘듬
+    </pre>
+    <div class="box" id="box-sizing">히릴릴ㄹ리</div>
+</body>
+</html>

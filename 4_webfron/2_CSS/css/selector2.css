@@ -1,0 +1,92 @@
+
+strong{
+    background-color: yellow;
+}
+span{
+    background-color: rgb(239, 3, 248);
+}
+#li-1{
+    background-color: blue}
+#li-2{
+    background-color: green;}
+#li-3{
+    background-color: black;}
+#li-4{
+    background-color: orange;}
+#li-5{
+    background-color: red;}
+#li-1,#li-2,#li-3,#li-4,#li-5{
+    color: white;
+}
+.test-1{color: red;}
+.test-2{color: blue;}
+.aaa{font-weight: bold;}/* 굵기 */
+
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{font-size: 20px;
+font-family: 'CookieRun-Regular';}
+
+div[name="name-1"]{ background-color: orangered;}
+[name="name-2"]{background-color: blue;}
+#test-div{border: 2px solid black;}
+#test-div p{background-color: yellowgreen;}
+
+.div-cls{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: #ddd;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+#active-test:active{
+    background-color: yellow;
+}
+#hover-test:hover{
+    background-color: hotpink;
+    width: 210px;
+    height: 210px;
+    /* transition-duration:0.5s; */
+}
+#hover-test{transition-duration:0.5s;}
+
+/* 상태 선택자 */
+#focus-test:focus{background-color: springgreen;}
+input[name="fruits"]:checked{
+    width: 16px;
+    height: 16px;
+}
+#test-div2>input:enabled{
+    background-color: lightgreen;
+}
+#test-div2>input:disabled{
+    background-color: lightcoral;
+}
+
+#div1+div{
+    background-color: yellow;
+}
+#div2~div{
+    background-color: olive;
+}
+
+#check1+label{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 25%;
+}
+#check1:checked+label{
+    background-image: url(../../images/check.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#check1{display: none;}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 선택자 5</title>
+    <link rel="stylesheet" href="css/selector5.css">
+</head>
+<body>
+    <h3>only-child</h3>
+    <pre>
+        특정 요소의 자식이 단 하나만 존재할때
+    </pre>
+
+    <div id="test1">
+        <p>child1</p>
+        <pre>child2</pre>
+    </div>
+
+    <hr>
+    <h3>only-of-type</h3>
+    <pre>
+        특정 요소 자식중
+        지정된 형태와 같은 자식요소가 하나만 있을때
+    </pre>
+
+    <div id="test2">
+        <p>child1</p>
+        <pre>child2</pre>
+    </div>
+    <hr>
+    <h3>:empty</h3>
+    <div id="test3">
+        <p></p>
+        <p>123</p>
+        <p></p>
+        <p>
+            <strong>hi</strong>
+        </p>
+        <p></p>
+    </div>
+
+    <hr>
+
+    <h3>여러 선택자 동시 선택</h3>
+    <pre>
+        여러 선택자 
+    </pre>    
+    <div id="test4-1">테스트1</div>
+    <div id="test4-2">테스트2</div>
+    <div class="test4-3">테스트3</div>
+
+    <hr>
+    <h3>특정 요소 특정 클래스만 선택</h3>
+    <ul id="test5-1">
+        <li class="c5">1</li>
+        <li class="c5">2</li>
+        <li class="c5">3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <ul id="test5-2">
+        <li class="c5">6</li>
+        <li class="c5">7</li>
+        <li class="c5">8</li>
+        <li>
+            <span class="c5">9</span>
+        </li>
+        <li>
+            <span class="c5">10</span>
+        </li>
+        <p class="c5">11</p>
+        <p class="c5">12</p>
+    </ul>
+    <hr>
+    <h2>클래스가 여러 개인 요소만</h2>
+
+    <div class="test6">테스트</div>
+    <div class="test6 c6">테스트2</div>
+    <div class="c6">테스트3</div>
+
+
+
+</body>
+</html>

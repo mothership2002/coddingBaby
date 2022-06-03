@@ -1,0 +1,207 @@
+*{box-sizing:border-box}
+body{margin: 0;}
+.container{
+    width: 1140px;
+    margin: auto;
+}
+/* div{border: 1px solid black;} */
+.header{
+    height: 200px;
+    display: flex;
+}
+.main-content{
+    height: 800px;
+    display: flex;
+}
+.footer{
+    height: 200px;
+}
+.header>div{
+    width:15%
+}
+.header>div:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header>div:nth-child(2){
+    /* flex-basis */
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content>.content-1{
+    width:70%
+}
+.main-content>.content-2{
+    width:30%
+}
+#page-top{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    z-index:999;
+    border:1px solid #ccc;
+    outline:none;
+    background-color:white;
+    color:#333;
+    cursor:pointer;
+    padding:15px 20px;
+    border-radius:100%;
+}
+
+
+#home-logo{
+    width: 120px;
+}
+
+
+.search-area{width: 500px;}
+.search-area fieldset{
+    padding: 2px;
+    margin: 0;
+    border: 2px solid #455ba7;
+    border-radius: 5px;
+    display: flex;
+}
+#query{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    width: 92%;
+}
+#search-btn{
+    width: 8%;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #455ba7;
+    background-color: white;
+    border: none;
+}
+
+
+.navigator{
+    height: 50px;
+    background-color: #455ba7;
+    position: sticky;
+    top : 0;
+    border-bottom: 2px solid black;
+}
+.navigator>ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    justify-content: center;
+}
+.navigator li{
+    /* flex-grow: ;
+    flex-shrink: ;
+    flex-basis: ; */
+    flex: 0 1 150px;
+}
+.navigator a{
+    display: block;
+    height: 100%;
+    text-align: center;
+    /* line-height: 48px; */
+    padding: 11px 0;
+    text-decoration: none;
+    font: 18px bold;
+    color: white;
+    border-radius: 5px;
+    background-color: #455ba7;
+    transition-duration: 100ms;
+}
+.navigator a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+form[name="login-form"]{
+    height: 140px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#id-pw-area{
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-basis: 60%;
+}
+#id-pw-area>div:first-child{
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column;
+}
+#id-pw-area>div:last-child{
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+}
+#id-pw-area input{
+    border: 0;
+    border-right: 1px solid #ddd;
+    flex-basis: 50%;
+    outline: 0;
+    margin: 0;
+    padding: 5px;
+ }
+ #id-pw-area input:first-child{
+     border-bottom: 1px solid #ddd;
+ }
+ #id-pw-area input:focus{
+     border: 2px solid #455ab7;
+ }
+ #id-pw-area button{
+     width: 100%;
+     border: 0;
+     background-color: white;
+     cursor: pointer;
+ }
+ #id-pw-area button:hover{
+    background-color:#455ab7;
+    color: white;
+    transition-delay: 70ms;
+ }
+ #signup-find-area{
+    margin-top: 10px;
+    padding-left: 6px;
+ }
+ #signup-find-area>a{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+ }
+ #signup-find-area>span{
+    padding: 0 10px;
+ }
+
+
+ .footer{
+    background-color: #a3add342;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer>div{
+    justify-content: center;
+    align-items: center;    
+}
+.footer-div>span,a{
+     color: black;
+     text-decoration: none;
+     font-size: 14px;
+}
+.footer-div>span{
+    font: 18px bold;
+}

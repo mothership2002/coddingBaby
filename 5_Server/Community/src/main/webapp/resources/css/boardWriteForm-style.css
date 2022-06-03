@@ -1,0 +1,101 @@
+.board-write{
+    width: 1000px;
+    min-height: 700px;
+    border: 1px solid #ccc;
+    margin : 50px auto;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.board-title{
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: 3px solid #ccc;
+}
+.board-title>input{
+    width: 100%;
+    font-size: 24px;
+    padding: 5px 0;
+    border: 0;
+    outline: none;
+}
+.board-title:focus-within{
+    border-bottom: 3px solid #455ba8;
+    transition-duration: 120ms;
+}
+.img-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.board-img{
+    width: 230px;
+    height: 230px;
+    display: inline-block;
+    text-align: center;
+
+    position: relative;
+}
+
+.board-img>label{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.inputImage{display: none;}
+
+.preview{
+    max-width: 100%;
+    max-height: 100%;
+}
+.delete-image{
+    position: absolute;
+    top: 0;
+    right: 7px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.thumbnail{
+    width: 300px;
+    height: 300px;
+}
+
+.board-content{
+    padding: 30px 0;
+    margin: 30px 0;
+    border-top: 3px solid #ccc;
+    border-bottom: 3px solid #ccc;
+}
+.board-content>textarea{
+    width: 100%;
+    height: 400px;
+    resize: none;
+    font-size: 18px;
+}
+
+.board-btn-area{
+    text-align: right;
+}
+.board-btn-area button{
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    border: 0;
+    background-color: #455ba8;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.board-btn-area button:hover{
+    background-color: white;
+    color: #455ba8;
+    border: 2px solid #455ba8;
+    transition-duration: 120ms;
+}
+input[type="file"]{
+    display: none;
+}

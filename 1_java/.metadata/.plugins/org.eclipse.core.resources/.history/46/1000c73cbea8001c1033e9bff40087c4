@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+
+public class asdf {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> num	= new ArrayList<Integer>();
+		
+		for(int i=0;i<10;i++) {
+			num.add(i);
+		}
+		
+		System.out.println(num);
+		
+		for(int i=0;i<5;i++) {
+			int x=(int)(Math.random()*9+1);
+			num.add(x,4);
+		}
+		
+		System.out.println(num);
+		
+//		for(int i=0;i<num.size();i++) {
+//			if(num.get(i)==4){
+//				num.remove(i);
+//				
+//			}
+//		}
+//		
+//		System.out.println(num);
+//		
+		
+	}
+
+}

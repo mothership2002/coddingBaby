@@ -1,0 +1,54 @@
+div{
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.container-1{
+    border: 2px dashed red;
+    position : relative;
+}
+.first{
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+}
+.second{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(75, 255, 40);
+    position: absolute; /* 기존 요소 배치 무시 */
+    top : 50px;
+    left: 50px;
+}
+
+.third{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: red;
+    top : 100px;
+    left : 100px;
+}
+
+.container-2{
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+#center{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.fixed-area{
+    width: 75px;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}

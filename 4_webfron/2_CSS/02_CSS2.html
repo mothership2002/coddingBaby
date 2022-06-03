@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_css선택자2</title>
+    <link rel="stylesheet" href="css/selector2.css">
+</head>
+<body>
+    <h3>기본 속성 선택자</h3>
+    <pre>
+        태그의 작성된 특정 속성 선택
+
+            선택자[속성명="속성값"]{css}
+    </pre>
+
+    <div name="name-1">1asdf</div>
+    <div name="name-2">2asdf</div>
+    <div name="name-1">3asdf</div>
+    <div name="name-2">4asdf</div>
+
+    <p></p>
+
+    <div id="test-div">
+        <p>test-div child</p>
+        <p>test-div child2</p>
+    </div>
+
+    <h3>반응선택자</h3>
+    <pre>
+        사용자의 움직임에 반응하여 스타일이 달라지는 선택자
+
+        - 요소를 클릭 (:active)
+        - 요소에 마우스가 올라가있는 경우 (:hover)
+    </pre>
+
+    <div class="div-cls" id="active-test">:active test</div>
+    <div class="div-cls" id="hover-test">:hover test</div>
+
+    <hr>
+    <h3>상태 선택자</h3>
+    <pre>
+        입력 양식 상태에 따라 선택되는 것
+
+        :focus
+        :checked
+
+        :enabled/:disabled
+    </pre>
+    <h4>:focus</h4>
+    <input type="text" id="focus-test">
+
+    <h4>checked</h4>
+    <label for="apple">사과</label>
+    <input type="checkbox" name="fruits" id="apple"><br>
+    <label for="banana">바나나</label>
+    <input type="checkbox" name="fruits" id="banana"><br>
+    <label for="melon">멜론</label>
+    <input type="checkbox" name="fruits" id="melon"><br>
+
+    <hr>
+    <h4>:enabled/disabled</h4>
+    <div id="test-div2">
+        사용가능 : <input type="text" enabled> <br>
+        불가능 : <input type="text" value="변경하면 안되는 값" disabled> <br>
+    </div>
+    <hr>
+    <h4>동위 선택자</h4>
+
+    <pre>
+        동위 관계에 위치한 요소를 
+        다음에 위치한 요소를 선택
+        A
+        B
+        C
+        1) A바로 뒤에 있는 b요소 하나를 선택
+           A선택자 + B선택자{css}
+        2) A 뒤에 있는 모든 B요소 선택 (~)
+           A ~ B
+    </pre>
+    <div id="div1">1번</div>
+    <div id="div2">2번</div>
+    <div id="div3">3번</div>
+    <div id="div4">4번</div>
+    <p>관련X</p>
+    <div id="div5">5번</div>
+
+    <hr><hr>
+    <h2>checkbox 모양</h2>
+
+    <pre>
+        [준비물]
+        - 동위 선택자(+)
+        - 상태 선택자(:checked)
+        - input type="checkbok"
+        - label 태그
+        - 체크박스 이미지
+    </pre>
+    <input type="checkbox" id="check1">
+    <label for="check1"></label>
+    
+</body>
+</html>

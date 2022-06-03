@@ -1,0 +1,110 @@
+.area1{background-color: red;}
+.area2{background-color: orange;}
+.area3{background-color: yellow;}
+.area4{background-color: green;}
+.area5{background-color: blue;}
+
+.block{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    color: white;
+    display: block;
+}
+/* block은  */
+.inline{
+    display: inline;
+}
+
+.inline-block{
+    display: inline-block
+}
+#container-1{
+    border: 3px solid black;
+    width: 300px;
+    height: 500px;
+}
+.div-1{
+    border: 1px solid white;
+    width: 100%;
+}
+#container-1>.div-1:first-child{
+    background-color: blueviolet;
+    height: 33.3%;
+}
+
+#container-1>.div-1:last-child{
+    background-color: crimson;
+    height: 33.3%;
+}
+#container-2{
+    border: 3px solid black;
+    height: 500px;
+    width: 300px;
+}
+
+#container-2>.div-1:nth-child(1){
+    background-color: aqua;
+    height: 20%;
+}
+#container-2>.div-1:nth-child(2){
+    background-color: aquamarine;
+    height: 30%;
+}
+#container-2>.div-1:nth-child(3){
+    background-color: antiquewhite;
+    height: 50%;
+}
+
+#myself{
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+}
+#myself>.jungyul>.myself.sell:first-child{
+    background-color: white;
+    height: 100%;
+    width: 33.3%;
+}
+#myself>.jung.myself.sell:first-child{
+    background-color: blue;
+    height: 33.3%;
+}
+#myself>.myself.sell:first-child{
+    background-color: dodgerblue;
+    height: 33.3%;
+}
+
+#myself>.jungyul{
+    height: 33.3%;
+    width: 100%;
+    background-color: red;
+}
+
+#container-3{
+    border : 3px solid red;
+    width: 400px;
+    height: 200px;
+}
+.div-3{
+    width: 47.5%;
+    height: 95%;
+    display: inline-block;
+    border: 5px solid black;
+}
+#container-3>.div-3:first-child{
+    background-color: black;
+}
+#container-3>.div-3:last-child{
+    background-color: steelblue;
+}
+
+.div-4{
+    border: 3px solid black;
+    height: 200px;
+    background-color: aquamarine;
+}
+#test4{
+    /* visibility: hidden; */
+    display: none;
+}

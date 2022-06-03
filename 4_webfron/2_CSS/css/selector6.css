@@ -1,0 +1,22 @@
+
+
+.cls1{
+    background-color: yellow;
+}
+
+div{
+    width : 150px;
+    height: 150px;
+    background-color: red !important;
+}
+
+.cls1{
+    background-color: green;
+}
+
+#test1{
+    height: 100px;
+    background-color: black;
+    color: white;
+}
+

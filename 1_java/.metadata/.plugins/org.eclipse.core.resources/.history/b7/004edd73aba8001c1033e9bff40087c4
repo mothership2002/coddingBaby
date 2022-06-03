@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+public class ex {
+
+	public static void main(String[] args) {
+
+		List<Integer> num = new ArrayList<Integer>();
+		
+		for(int i=0;i<10;i++) {
+			num.add(i,i+1);
+		}
+		System.out.println(num);
+		
+		for(int i=4;i<8;i++) {
+			num.add(i, 4);
+		}
+		System.out.println(num);
+		
+		for(Integer i : num) {
+			if(i==4) {
+				num.remove(i);
+			}
+		}
+		System.out.println(num);
+		
+	}
+
+}

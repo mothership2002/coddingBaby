@@ -1,0 +1,10 @@
+package edu.kh.test.user.model.vo;
+
+public class User {
+
+	private int userNo;
+	private String userNo;
+	private String userNo;
+	private String userNo;
+	
+}

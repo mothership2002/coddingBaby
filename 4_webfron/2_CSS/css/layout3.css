@@ -1,0 +1,68 @@
+div{
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.test{
+    width: 300px;
+    height: 200px;
+    background-color: #eee;
+}
+
+.float-left{
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    float: left;
+}
+
+.float-right{
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    float: right;
+}
+
+.clear{
+    background-color: red;
+    color: white;
+    clear: both;
+}
+
+.container{
+    width: 400px;
+    height: 200px;
+}
+
+.div-1{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.bg-1{background-color: red;}
+.bg-2{background-color: orange;}
+.bg-3{background-color: yellow;}
+.bg-4{background-color: green;}
+.bg-5{background-color: blue;}
+.bg-6{background-color: navy;}
+.bg-7{background-color: purple;}
+
+.row-2{
+    height: 50%;
+}
+
+.container-1{
+    width: 400px;
+    height: 600px;
+}
+
+.row-3{
+    height: 50%;
+}
+
+.col-1{
+    width: 50%;
+    height: 100%;
+    float: left;
+}

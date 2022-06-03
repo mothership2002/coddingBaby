@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Univercity Management System</comment>
+<entry key="insertAccount">
+INSERT INTO TB_PRO_ACCOUNT
+VALUES (SEQ_ACT_NO.NEXTVAL,?,?,?,?,DEFAULT,(SELECT DEPARTMENT_NO
+											FROM TB_DEPARTMENT
+											WHERE DEPARTMENT_NAME = ?),(SELECT PRO_NO
+                                                                        FROM tb_professor
+                                                                        WHERE PRO_SSN = ? 
+                                                                        AND PRO_NAME = ?))
+							
+</entry>
+<entry key="insertRecord">
+INSERT INTO TB_GRADE
+VALUES ((SELECT CLASS_NO
+		 FROM TB_CLASS
+		 WHERE CLASS_NAME = ? ), ? , ? )
+</entry>
+<entry key ="insertStudent">
+INSERT INTO TB_STUDENTS
+VALUES(?,?,?,?,?,?,'1',(
+SELECT DEPARTMENT_NO
+FROM TB_DEPARTMENT
+WHERE DEPARTMENT_NAME = ?),
+TO_DATE(?,'YYYY-MM-DD'))
+</entry>
+
+<entry key ="accessUpdateAll">
+UPDATE TB_PRO_ACCOUNT
+SET ACCESS_YN = 'Y'
+WHERE ACCOUNT_NO = ?
+</entry>
+
+<entry key ="accountCheck">
+UPDATE TB_PRO_ACCOUNT
+SET ACCESS_YN = 'Y'
+WHERE ACCOUNT_NO = ?
+</entry>
+
+<entry key ="accountCheck2">
+SELECT ACCOUNT_NAME
+FROM TB_PRO_ACCOUNT
+WHERE ACCOUNT_NO = ?
+</entry>
+
+<entry key ="updateGrade">
+UPDATE TB_STUDENTS
+SET STUDENT_GRD = CASE WHEN (SELECT COUNT(*)
+                            FROM TB_GRADE 
+                            WHERE CLS_STDNO = STUDENT_NO
+                            GROUP BY CLS_STDNO) >= 36 THEN 4
+                       WHEN (SELECT COUNT(*)
+                            FROM TB_GRADE
+                            WHERE CLS_STDNO = STUDENT_NO
+                            GROUP BY CLS_STDNO) >= 24 THEN 3
+                       WHEN (SELECT COUNT(*)
+                            FROM TB_GRADE
+                            WHERE CLS_STDNO = STUDENT_NO
+                            GROUP BY CLS_STDNO) >= 12 THEN 2
+                       ELSE 1
+                  END
+WHERE STUDENT_NO  IN (SELECT CLS_STDNO
+                       FROM TB_GRADE
+                       GROUP BY CLS_STDNO)
+</entry>
+
+<entry key ="">
+</entry>
+
+<entry key ="">
+</entry>
+
+<entry key ="">
+</entry>
+
+<entry key ="">
+</entry>
+
+<entry key ="">
+</entry>
+
+
+
+
+</properties>

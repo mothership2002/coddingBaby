@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+
+public class asdf {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> num	= new ArrayList<Integer>();
+		
+		for(int i=0;i<10;i++) {
+			num.add(i);
+		}
+		
+		System.out.println(num);
+		
+		for(int i=4;i<8;i++) {
+			num.add(i,4);
+		}
+		
+		System.out.println(num);
+//		
+//		for(int i=0;i<num.size();i++) {
+//			if(num.get(i).equals((Integer)4)){
+//				num.remove(i);
+//			}
+//		}
+//		
+		
+		System.out.println(num);
+		
+		
+	}
+
+}

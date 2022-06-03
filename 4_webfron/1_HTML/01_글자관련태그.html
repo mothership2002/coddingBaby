@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- !DOCTYPE(document type(문자형식)) : 현재 문서 형식 지정 -->
+
+<html lang="ko">
+<!-- html 태그 : html 문서의 내용 정의 --> 
+
+<!-- lang 속성 : html 문서의 언어 표시 
+                 ex) 검색 엔진이 참고-->
+    <head>
+       <!-- head 태그 : html 문서 정의 --> 
+       <title>  01_글자 관련 태그 </title>
+        <meta charset="UTF-8">
+        <!-- 문서의 문자 형식 표기 -->
+    </head>
+
+    <body>
+        <!-- body 태그 : 화면에 보여질 html 문서 내용 -->
+        <!-- <h1> ~ <h6> 
+            제목을 작성할 때 사용
+            1~6의 단계 폰트 크기
+        -->
+        기본 글자 크기
+        <h1>h1 태그에 작성된 내용</h1>
+        <h2>h2 태그에 작성된 내용</h2>
+        <h3>h3 태그에 작성된 내용</h3>
+        <h4>h4 태그에 작성된 내용</h4>
+        <h5>h5 태그에 작성된 내용</h5>
+        <h6>h6 태그에 작성된 내용</h6>
+        <!-- preview available -->
+
+        <!-- hr(horizon) : 수평선 -->
+        <hr>
+        <h3>HTML 문서는 연속 공백 식별 불가능</h3>
+
+        안녕하세요 감사해요 잘있어요 다시 만나요.
+        안녕하세요 감사해요 잘있어요 다시 만나요.
+         <h3 style="color:red">
+            연속 공백은 1개로만 인식
+        </h3>
+        <h3>공백을 화면에 출력하는 방법</h3>
+        1. 띄어쓰기 &nbsp;1 &nbsp;&nbsp;2 &nbsp;&nbsp;&nbsp;3
+         &nbsp;&nbsp;&nbsp;&nbsp;4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5
+         &/nbsp;/<br>
+        2. 줄바꿈  
+        <!-- line break -->
+        <br>1
+        <br>
+        <br>2
+        <br>
+        <br>
+        <br>3
+        <hr>
+        <h3 style="color: green;">p,pre 태그 </h3>
+        <!-- p 태그 (Paragragh) 
+            - 글 작성 용도의 태그
+            - 종료 시 줄바꿈 ==<br>
+        -->
+        1번 <br>
+        2번 <br>
+        3번 <br>
+        <br><br>
+        <p>p1번 !</p>
+        <p>p2번  !</p>
+        <p>p3번   !</p>
+        <!-- pre 태그 (preformetted)
+            - 글 작성 용도의 태그
+            - 줄바꿈
+            - 시작, 종료 사이의 작성된 문자열을 출력 -->
+        <pre>pre1번 !</pre>
+        <pre>pre2번  !</pre>
+        <pre>pre3번   !</pre>
+        <pre>pre4번    !</pre>
+        <pre>pre5번     !</pre>
+        <pre>끝</pre>
+        <pre>pre1-1번
+            
+        </pre>
+        <pre>pre1-2번
+            
+
+        </pre>
+        <pre>pre1-3번
+            
+
+
+        </pre>
+        <pre>pre끝</pre>
+        <hr>
+        <b>b태그</b> : 글자 단순 강조<br>
+        <strong>strong 태그</strong> : 글자 강조 (웹 강조)
+        <br>
+        <!-- 웹 접근성 
+            일반인 뿐 아닌 사회적 약자를 위해
+            웹 사이트에서 제공하는 기능을 사용할 수 있도록 하는 태그
+            
+            사용되는 기술 : Screen Reader
+                            
+        -->
+        <i>i 태그</i> : 단순 기울기<br>
+        <em>em 태그</em> : 강조 기울기<br>
+        <mark>mark 태그</mark> : 형광펜 강조<br>
+        <u>u 태그</u> : 밑줄<br>
+        <s>s 태그</s> : 취소선<br>
+        <del>del 태그</del> : 삭제선<br>
+        <small>samll 태그</small> : 글자 축소<br>
+        sup 태그 : x <sup>2</sup> 윗첨자<br>
+        sub 태그 : log <sub>10</sub> 아랫첨자<br>
+        abbr(abbreviation) : 마우스 오버 시 튤팁 출력 태그 <br>
+        <abbr title="Hyper Text Transfer Protocol">HTTP</abbr>
+        
+        <hr><hr>
+        <p>
+        <h3>글자 관련 태그 응용</h3>
+        <mark>태그</mark>들은 해당 태그 내에서 중첩으로 사용 가능하다.<br>
+        <strong>굵은</strong> 글자를 사용 할 수도 있고, 
+        <em>기울이거나, </em>
+        <del>취소선</del>을 넣는 등<br>
+        다양하게 사용할 수 있다. <br>
+        </p>
+        
+    </body>
+
+</html>

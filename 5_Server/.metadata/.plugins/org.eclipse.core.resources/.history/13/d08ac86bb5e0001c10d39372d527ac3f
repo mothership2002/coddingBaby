@@ -1,0 +1,17 @@
+package edu.kh.SemiProject.member.model.service;
+
+import static edu.kh.SemiProject.common.JDBCTemplate.*;
+
+import edu.kh.SemiProject.member.model.dao.UserDAO;
+import edu.kh.SemiProject.member.model.vo.User;
+
+public class UserService {
+	
+	private UserDAO dao = new UserDAO();
+
+	public int login(User user) {
+		return 0;
+	}
+	
+	
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>board-sql.xml</comment>
+
+<entry key="selectBoardName">
+SELECT BOARD_NM 
+FROM BOARD_TYPE
+WHERE BOARD_CD = ?
+</entry>
+
+<entry key="selectListCount">
+SELECT COUNT(*)
+FROM BOARD
+WHERE BOARD_ST = 'N'
+AND BOARD_CD = ?
+</entry>
+
+<entry key="selectBoardList">
+SELECT * FROM (
+    SELECT ROWNUM RNUM, A.* FROM (
+        SELECT  BOARD_NO,BOARD_TITLE,MEMBER_NICK,
+        		TO_CHAR(CREATE_DT,'YYYY-MM-DD') AS CREATE_DT,
+        		READ_COUNT
+        FROM BOARD
+        JOIN MEMBER USING(MEMBER_NO)
+        WHERE BOARD_CD = ?
+        AND BOARD_ST = 'N'
+        ORDER BY BOARD_NO DESC
+    ) A
+)
+WHERE RNUM BETWEEN ? AND ?
+</entry>
+
+<entry key="selectBoardDetail">
+SELECT BOARD_NO,BOARD_TITLE,BOARD_CONTENT,
+       TO_CHAR(CREATE_DT,'YYYY"년" MM"월" DD"일" HH24:MI:SS') 작성일,
+       TO_CHAR(UPDATE_DT,'YYYY"년" MM"월" DD"일" HH24:MI:SS') "최근 수정일",
+       READ_COUNT,MEMBER_NICK,PROFILE_IMG,MEMBER_NO,BOARD_NM
+FROM BOARD
+JOIN MEMBER USING(MEMBER_NO)
+JOIN BOARD_TYPE USING(BOARD_CD)
+WHERE BOARD_NO = ?
+AND BOARD_ST = 'N'
+</entry>
+
+<entry key="selectImage">
+SELECT * FROM BOARD_IMG
+WHERE BOARD_NO = ?
+ORDER BY IMG_LEVEL
+</entry>
+
+<entry key="">
+SELECT REPLY_NO,REPLY_CONTENT,
+       TO_CHAR(CREATE_DT,'YYYY.MM.DD HH24:MI:SS') AS 작성일,
+       BOARD_NO,MEMBER_NO,MEMBER_NICK,PROFILE_IMG
+FROM REPLY
+JOIN MEMBER USING (MEMBER_NO)
+WHERE REPLY_ST = 'N'
+AND BOARD_NO = ?
+ORDER BY REPLY_NO
+</entry>
+
+</properties>

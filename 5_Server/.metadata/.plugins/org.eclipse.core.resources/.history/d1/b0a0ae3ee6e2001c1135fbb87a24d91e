@@ -1,0 +1,31 @@
+package edu.kh.test.user.model.dao;
+
+import static edu.kh.test.common.JDBCTemplate.*;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+
+import edu.kh.test.user.model.vo.User;
+
+public class UserDAO {
+
+	/**
+	 * @param conn
+	 * @param userNo
+	 * @return uList
+	 * @throws Exception
+	 */
+	public List<User> searchUser(Connection conn, int userNo) throws Exception{
+		List<User> uList = new ArrayList<User>();
+		try {
+			pstmt = conn.prepareStatement("");
+		} finally {
+
+		}
+		return uList;
+	}
+
+	
+	
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> 02_data 입출력 </title>
+   <link rel="stylesheet" href="">
+   <script src="js/02_data입출력.js"></script>
+   <style>
+       .box{border: 1px solid black;}
+       #area1{
+           width: 520px;
+           height: 300px;
+           border: 1px solid black;
+           background-color: rgb(0, 255, 170);
+           overflow: auto; 
+           display: flex;
+           flex-wrap: wrap;
+           align-content: flex-start;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+   </style>
+</head>
+<body>
+    <h3>innerText</h3>
+    <pre>
+        자바스크립트에서 요소에 작성된 내용을
+        읽어들이거나 변경하는 속성
+
+        - 내용을 읽어올때 html 태그도 리터럴로 받음
+    </pre>
+    <button type="button" onclick="getInnerText()">get innerText</button>
+    
+    <button type="button" onclick="setInnerText()">set innerText</button>
+
+    <p id="test1" class="box">
+        테스트1 입니다. <br>
+        <b>두줄</b>
+    </p>
+
+    <hr>
+    <h3>innerHTML</h3>
+    <pre>
+        자바스크립트에서 요소 전체 값을
+        읽어들이거나 변경하는 속성
+    </pre>
+
+    <button type="button" onclick="getInnerHTML1()">innerHTML</button>
+    <button type="button" onclick="setInnerHTML1()">to innerHTML</button>
+
+    <p id="test2" class="box">
+        테스트2
+        <br>
+        <b>hi hello</b>
+    </p>
+    <hr>
+    <h3>innerHTML 응용</h3>
+    <button onclick="add()">추가</button>
+    <div id="area1">
+        <div class="box2"></div>
+    </div>
+    <hr>
+    <h3>window.alert("내용")</h3>
+    <pre>
+        - 경고창 
+    </pre>
+    <button onclick="fnAlert()">alert</button>
+    <h3>window.confirm("내용")</h3>
+    <pre>
+        yes/no 결과를 얻고자 할때 사용
+        true,false
+    </pre>
+    <button id="confirmBtn" onclick="fnConfirm()">confirm</button>
+    <h3>window.prompt("내용")</h3>
+    <pre>
+        -텍스트를 작성할 수 있는 창
+        -확인 컨텐츠값 반환
+        -취소 null 반환
+    </pre>
+    <button onclick="fnPrompt()">prompt</button>
+    <p id="promptRusult">
+    </p>
+</body>
+</html>

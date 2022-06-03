@@ -1,0 +1,57 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
+.content{
+    width: 150px;
+    height: 150px;
+}
+.border{
+    border: 10px solid red;
+}
+.padding{
+    padding: 30px;
+}
+.margin{
+    margin: 50px;
+    /* display: inline-block; */
+}
+#m1{
+    margin: 100px;
+}
+/*                            */
+
+
+.padding-test{
+    /* padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px; */
+    padding: 50px 60px 70px 80px;
+    /* 시계방향 */
+}
+.border-test{
+    border-top: 3px solid black;
+    border-left: 10px dotted blue;
+    border-right: 7px double orange ;
+    border-bottom: 5px dashed magenta;
+
+    /* border-width: 20px 10px 15px 7px */
+}
+
+.margin-test{
+    margin: 10px 20px 30px 40px;
+}
+.margin-auto{
+    margin: auto;
+    margin-top: 100px;
+}
+#box-sizing{
+    width: 300px;
+    height: 300px;
+    box-sizing:border-box ;
+    border: 10px solid red;
+    padding: 20px;
+
+}

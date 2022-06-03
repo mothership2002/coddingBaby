@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> 제목 </title>
+   <link rel="stylesheet" href="">
+   <script src="js/04_변수,자료형.js"></script>
+   <style>
+       #typeBox{
+           border: 2px solid black;
+           width: 500px;
+           height: 400px;
+           overflow: auto;
+       }
+   </style>
+</head>
+<body>
+    <h1>변수 선언 위치에 따른 구분</h1>
+    <h4>java</h4>
+    <pre>
+        public class Student{
+            
+            private String name;
+            public static String schoolName;
+            
+            public void study(){
+
+            }
+        }
+    </pre>
+    <hr>
+    <h4>javaScript</h4>
+    <pre>
+        var num1;
+        num2;
+
+        function test(){
+            var num3;
+            num4;   //전역 변수
+            if(){
+                var num5; //function의 지역변수
+                num6      //전역 변수
+            }
+        }
+    </pre>
+    <script>
+        console.log(num1+2);
+        console.log(num2+2);
+    </script>
+    <hr>
+    <h1>변수 선언 방식</h1>
+    <pre>
+        var     :   변수 , 변수명 중복 가능 , 함수 레벨 scope
+        let     :   변수 , 변수명 중복 불가 , 블럭 레벨 scope 
+        const   :   상수 , 변수명 중복 불가 , 블록 레벨 scope
+        
+        1순위   :   const
+        2순위   :   let
+        3순위   :   var
+    </pre>
+    <h1>자바스크립트의 자료형</h1>
+    <pre>
+        자바스크립트는 변수 선언 시 별도의 자료형을 지정하지 않는다.
+        변수에 대입되는 값에 의해 자료형이 결정된다.
+        - String
+        - number
+        - boolean
+        - object -> array
+        - function
+        - undefined
+        - null  //리터럴의 개념
+    </pre>
+    <button onclick="typeTest()">자료형 확인</button>
+    <div id="typeBox"></div>
+</body>
+</html>

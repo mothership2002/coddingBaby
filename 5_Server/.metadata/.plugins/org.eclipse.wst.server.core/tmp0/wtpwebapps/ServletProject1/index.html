@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Servlet test project </title>
+   <link rel="stylesheet" href="">
+   <style>
+       form[name="first"]{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+       }
+       input[name="inputName"],[name="inputAge"]{
+        display: inline-block;
+       }
+   </style>
+</head>
+<body>
+    <h1>index</h1>
+    <hr>
+    <h3>test1</h3>
+    <pre>form input 값을 지정된 서버 또는 페이지로 제출
+        name속성 반드시 작성
+        action : 전달할 좌표
+        method : 데이터 전달 방식 지정
+        ServletProject/ {요청내용}
+    </pre>
+    <form action="/ServletProject1/example1.do" name="first">
+        이름 <input type="text" name="inputName">
+        나이 <input type="number" name="inputAge">
+        <button>submit</button>
+    </form>
+    <hr>
+    <h3>type get request and response</h3>
+    <pre>
+        요청하는 주소 뒤에 전달 값을 문자열 형태로 붙혀서 서버로 전달<br>
+    </pre>
+    <form action="/ServletProject1/example2.do" method="get">
+        요청자 : <input type="text" name="requestist"><br>
+
+        <label for="아이스 아메리카노">
+            <input type="checkbox" name="coffee" id="아이스 아메리카노" value="ice-americano">아이스 아메리카노
+        </label><br>
+        <label for="카라멜 마끼야또">
+            <input type="checkbox" name="coffee" id="카라멜 마끼야또" value="caramel">카라멜 마끼야또
+        </label><br>
+        <label for="녹차 라떼">
+            <input type="checkbox" name="coffee" id="녹차 라떼" value="green-tea">녹차 라떼
+        </label><br>
+        <label for="초코칩 프라페">
+            <input type="checkbox" name="coffee" id="초코칩 프라페" value="chocochip">초코칩 프라페
+        </label><br>
+        <label for="에스프레소">
+            <input type="checkbox" name="coffee" id="에스프레소" value="espreso">에스프레소
+        </label><br>
+        <button>submit</button>
+    </form>
+    <br>
+    <hr>
+    <h3>회원 정보 제출하기(직접 해보기!)</h3>
+    <pre>
+        요청 주소(action) : /ServletProject1/example3.do
+
+        데이터 전달 방식(method) : GET 
+
+        * 비밀번호가 일치하지 않으면
+          응답화면에 h1태그로 "비밀번호가 일치하지 않습니다";
+
+          일치하면 가입된 회원 정보 출력
+
+        * 좋아하는 색을 체크하지 않으면 "없습니다" 출력
+
+        (참고) 
+        - 서버로 제출된 input 태그 값은 모두 [String] 입니다.
+
+        - input type="password" 는 화면에서만 안보이지 
+          서버로 제출된 경우 입력된 값이 그대로 보입니다.
+    </pre>
+    <form action="/ServletProject1/example3.do" method="get">
+        아이디 : <input type="text" name="ID"><br>
+        비밀번호 : <input type="password" name="PW"><br>
+        비밀번호 확인 : <input type="password" name="passcheck"><br>
+        이름 : <input type="text" name="name"><br>
+        이메일 : <input type="email" name="email"><br>
+        좋아하는 색 <br>
+        <label for="빨강"><input type="checkbox" name="color" id="빨강" value="빨강 ">빨강</label>
+        <label for="노랑"><input type="checkbox" name="color" id="노랑" value="노랑 ">노랑</label>
+        <label for="초록"><input type="checkbox" name="color" id="초록" value="초록 ">초록</label>
+        <label for="파랑"><input type="checkbox" name="color" id="파랑" value="파랑 ">파랑</label>
+        <label for="분홍"><input type="checkbox" name="color" id="분홍" value="분홍 ">분홍</label>
+        <label for="검정"><input type="checkbox" name="color" id="검정" value="검정 ">검정</label><br>
+        <button>submit</button><br>
+    </form>
+</body>
+</html>

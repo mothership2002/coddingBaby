@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> 예제 </title>
+   <script src="js/05_예제.js"></script>
+</head>
+<body>
+    <h1>간이 계산기 만들기</h1>
+    <label for="first">첫번째 수 : <input type="number" id="first"></label><br>
+    <label for="second">두번째 수 : <input type="number" id="second"></label><br>
+    
+    <button onclick="plus(Number(first.value),Number(second.value))">+</button>
+    <button onclick="minus(Number(first.value),Number(second.value))">-</button>
+    <button onclick="multiplication(Number(first.value),Number(second.value))">*</button>
+    <button onclick="division(Number(first.value),Number(second.value))">/</button>
+    <button onclick="modular(Number(first.value),Number(second.value))">%</button>
+    <!-- eval() 기능 잘안씀 -->
+    <!-- new Function("return"+num1+op+num2)() -->
+    <br>결과 : <b id="result"></b>
+
+</body>
+</html>

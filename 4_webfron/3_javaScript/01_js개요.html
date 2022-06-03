@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>01_js개요</title>
+   <link rel="stylesheet" href="">
+   <script src="/3_javaScript/js/01_js개요.js"></script>
+   <style>
+       #box{
+           width: 300px;
+           height: 200px;
+           border:1px solid black;
+       }
+   </style>
+</head>
+<body>
+    <h1>js 개요</h1>
+    <h3>스크립트 언어</h3>
+    <pre>
+        기존 프로그램의 동작을 사용자의 요구에 맞게 수행되도록 해주는 용도
+        소스코드 컴파일 X
+        인터프리터를 이용하여 소스코드를 한 줄씩 읽어 바로 실행
+        -> 컴파일에 소요되는 시간이 없음
+           프로그램 실행시간이 느림.
+
+        짧은 소스코드 파일로 상호작용 하도록 고안됨
+    </pre>
+    <h3>js</h3>
+    <pre>
+        웹 브라우저에서 많이 사용하는 인터프리터 방식의 객체 지향 프로그래밍 언어
+        ECMA script 표준을 따르는 기술
+    </pre>
+    <hr>
+    <h2>자바스크립트 작성 방법</h2>
+    <ul>
+        <li>브라우저 콘솔에 직접 작성</li>
+        <li>html 내부에 script 태그에 이용해서 작성(internal)</li>
+        <li>html 외부에 (.js)파일을 이용해서 작성 (external)</li>
+        <li>태그에 직접 작성 (inline)</li>
+    </ul>
+    <button type="button" onclick="btnClick1()">internal</button>
+    
+    <button type="button"  onclick="btnClick2()">external</button>
+    <button type="button"  onclick="alert('inline')">inline</button>
+    <script>
+        function btnClick1(){
+            alert("internal");
+        }
+    </script>
+    <hr>
+    <h3>js test</h3>
+    <div id="box"></div>
+    <button type="button" onclick="changeColor1()">red</button>
+    <button type="button" onclick="changeColor2()">yellow</button>
+</body>
+</html>

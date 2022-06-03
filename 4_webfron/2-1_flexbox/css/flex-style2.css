@@ -1,0 +1,16 @@
+.flex-container{
+    height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+    /* align-content */
+    /* flex-wrap wrap | wrap-reverse 가 적용된 설정에서만 적용가능 */
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: center; */
+    /* align-content: space-around; */
+    /* align-content: space-between; */
+    align-content: space-evenly;
+
+    
+}

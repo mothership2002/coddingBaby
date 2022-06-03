@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>로또 </title>
+   <link rel="stylesheet" href="">
+   <style>
+      #container{
+         display: flex;
+         width: 400px;
+         justify-content: space-around;
+         margin: 100px auto 50px;
+      }
+      #container>div{
+         width:50px;
+         height: 50px;
+         border: 1px solid black;
+         border-radius: 50%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-size: 24px;
+         font-family: '궁서체';
+      }
+      #btn{
+         width: 300px;
+         height: 30px;
+      }
+   </style>
+</head>
+<body>
+   <div id="container">
+      <div id="0"></div>
+      <div id="1"></div>
+      <div id="2"></div>
+      <div id="3"></div>
+      <div id="4"></div>
+      <div id="5"></div>
+   </div>
+   <button id="btn">번호생성</button>
+   <script>
+      document.getElementById("btn").addEventListener("click",function(){
+         const numbers = document.querySelectorAll("#container>div");
+         const arr = [];
+         while(arr.length<6){
+            const num = Math.floor(Math.random()*45+1);
+            if(arr.indexOf(num) == -1){
+               arr.push(num);
+            }
+         }
+         arr.sort(function(a,b){
+            return a-b;
+         })
+
+         for (let i=0;i<arr.length;i++) {
+            numbers[i].innerText = arr[i];
+            document.getElementsByTagName("div")
+            const r = Math.floor(Math.random()*256+1);
+            const g = Math.floor(Math.random()*256+1);
+            const b = Math.floor(Math.random()*256+1);
+            numbers[i].style.color =  "rgb("+r+","+g+","+b+")";
+         }
+         console.log(numbers[1])
+      })
+   </script>
+</body>
+</html>

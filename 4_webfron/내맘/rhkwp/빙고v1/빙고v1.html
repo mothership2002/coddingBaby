@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> 제목 </title>
+   <link rel="stylesheet" href="">
+</head>
+<body>
+    <div id="bingoBoard">
+        <div class="row">
+            <div class="column">1</div>
+            <div class="column">2</div>
+            <div class="column">3</div>
+            <div class="column">4</div>
+            <div class="column">5</div>
+        </div>
+        <div class="row">
+            <div class="column">1</div>
+            <div class="column">2</div>
+            <div class="column">3</div>
+            <div class="column">4</div>
+            <div class="column">5</div>
+        </div>
+        <div class="row">
+            <div class="column">1</div>
+            <div class="column">2</div>
+            <div class="column">3</div>
+            <div class="column">4</div>
+            <div class="column">5</div>
+        </div>
+        <div class="row">
+            <div class="column">1</div>
+            <div class="column">2</div>
+            <div class="column">3</div>
+            <div class="column">4</div>
+            <div class="column">5</div>
+        </div>
+        <div class="row">
+            <div class="column">1</div>
+            <div class="column">2</div>
+            <div class="column">3</div>
+            <div class="column">4</div>
+            <div class="column">5</div>
+        </div>
+    </div>
+    <script>
+        /* 행=flex
+           컬럼하나당 테두리 1px
+           컬럼하나당 가로세로 60px
+           컬럼 요소당 1px 마진
+           내부 폰트 20px
+         */
+        document.getElementById("bingoBoard").style.padding = "50px"; 
+
+        const a = document.querySelectorAll(".row");
+        for(let i=0;i<a.length;i++){
+            a[i].style.display = "flex";
+            a[i].style.justifyContent = "center";
+            a[i].style.alignItems = "center";
+        }
+        // function mouseenter(){
+        //     EventTarget.style.backgroundColor = "yellow";
+        // }
+        // function mouseleave(){
+        //     EventTarget.style.backgroundColor = "white";
+        // }
+        const b = document.querySelectorAll(".column");
+        for(let i=0;i<b.length;i++){
+            b[i].style.width = "50px";
+            b[i].style.height = "50px";
+            b[i].style.margin = "2px";
+            b[i].style.border = "1px solid black";
+            b[i].style.fontSize = "20px";
+            b[i].style.textAlign = "center";
+            b[i].style.lineHeight = "50px";
+            b[i].addEventListener("mouseenter",function(){
+                this.style.backgroundColor = "yellow";
+             })
+            b[i].addEventListener("mouseleave",function(){
+                this.style.backgroundColor = "white";
+            })
+            b[i].addEventListener("click",function(){
+                // alert(b[i].innerText);
+                this.style.backgroundColor = "orange";
+            })
+        }
+
+        
+    </script>
+</body>
+</html>

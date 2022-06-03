@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> 제목 </title>
+    <style>
+        .area{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .input-color,.change-btn{
+            padding : 0;
+            margin: 0;
+            width: 100px;
+            box-sizing: border-box;
+        }
+        .box{
+            display: inline-block;
+        }
+        .input3{
+            outline: none;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>데이터 입출력</h1>
+    <pre>
+        요소의 내용을 입/출력
+        [js]
+        - innerText    : 요소 내용 얻어오기
+        - innerText = "content" : 요소 내용 지우고 삽입
+        - innerHTML    : 요소 내용 얻어오기
+        - innerHTML = "content" : 요소 내용 지우고 삽입
+        - value    : 내용 얻어오기
+        - value = "value" : 출력
+        [jQuery]
+        - $("css선택자(단일)").text() : 요소 내용 얻기
+        - $("css선택자(단일)").text("content") : 요소 내용 출력 
+        - $("css선택자(단일)").html() : 요소 내용 얻기
+        - $("css선택자(단일)").html("content") : 요소 내용 출력 
+        - $("input선택자").val() : 얻어오기
+        - $("input선택자").val("값") : 출력
+    </pre>
+    <hr>
+    <h1>순회 메서드</h1>
+    <pre>
+        [js]
+            -parentElement : 부모요소 선택
+            -children      : 자식요소 선택 (배열)
+            -previousElementSibling : 이전 형제요소 선택
+            -nextElementSibling : 이후 형제요소 선택
+        [jQuery]
+            -$("단일 선택자").parent() : 부모요소 선택
+            -$("단일 선택자").children() : 자식요소 (배열)
+            -$("단일 선택자").children("선택자") : 자식요소(단일)
+            -$("").prev() : 이전 형제요소
+            -$("").next() : 이후 형제
+
+            parents() : 모든 상위 요소
+            parentUntill(선택자) : 현재 요소부터 선택자 요소까지 상위 요소
+            find(선택자) : 후손 중 선택자가 일치하는 모든 후손 요소
+            sibling() : 모든 형제 요소 
+            
+            prevAll() : 이전 모든 형제 요소
+            nextAll() : 이후 모든 형제 요소
+
+            prevUntill(선택자) : 이전 모든 형제 중 선택자 일치하는 요소 전까지 
+            nextUntill(선택자) : 이후 모든 형제 중 선택자 일치하는 요소 전까지 
+    </pre>
+    <hr>
+    <div class="area" id="div1"></div>
+    <input type="text" class="input-color"> <br>
+    <button class="change-btn" id="btn1">색변경</button>
+    <hr>
+    <h3>2단계</h3>
+    <div class="box">
+        <div class="area div2"></div>
+        <input type="text" class="input-color input2">
+    </div>
+    <div class="box">
+        <div class="area div2"></div>
+        <input type="text" class="input-color input2">
+    </div>
+    <div class="box">
+        <div class="area div2"></div>
+        <input type="text" class="input-color input2">
+    </div>
+    <div class="box">
+        <div class="area div2"></div>
+        <input type="text" class="input-color input2">
+    </div>
+    <div class="box">
+        <div class="area div2"></div>
+        <input type="text" class="input-color input2">
+    </div>
+    <button class="change-btn" id="btn2">변경</button>
+    <hr>
+    <h3>3단계</h3>
+    <div class="box">
+        <div class="area div3"></div>
+        <input type="text" class="input-color input3">
+    </div>
+    <div class="box">
+        <div class="area div3"></div>
+        <input type="text" class="input-color input3">
+    </div>
+    <div class="box">
+        <div class="area div3"></div>
+        <input type="text" class="input-color input3">
+    </div>
+    <div class="box">
+        <div class="area div3"></div>
+        <input type="text" class="input-color input3">
+    </div>
+    <div class="box">
+        <div class="area div3"></div>
+        <input type="text" class="input-color input3">
+    </div>
+    <div class="box">
+        <div class="area div3"></div>
+        <input type="text" class="input-color input3">
+    </div>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/03_데이터입출력.js"></script>
+</body>
+</html>

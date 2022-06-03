@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> 제목 </title>
+   <style>
+       html{
+           box-sizing: border-box;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
+       }
+       .title{
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+       .sub-title>div{height: 30px;}
+       .row{
+           width: 300px;
+           height: 60px;
+       }
+       .column{
+           border: 1px solid black;
+           width: 50px;
+           height: 50px;
+           display: inline-block;
+           cursor: pointer;
+           line-height: 52px;
+       }
+       .column:hover{
+           background-color: yellow;
+       }
+       #area{
+           padding: 25px;
+       }
+       .sub-title>div{
+           display: flex;
+           text-align: left;
+           justify-content: space-around;
+           align-items: flex-start;
+       }
+        .sub-title label{
+           width: 120px;
+       }
+   </style>
+</head>
+<body>
+    <div class="title">빙고게임</div>
+    <div class="sub-title">
+        <div>
+            <label for="">칸 수(최소3) : </label><input type="number">
+        </div>
+        <div>
+            <label for="">빙고 수 : </label><input type="number">
+        </div>
+        <button>생성</button>
+    </div>
+    <div id="area">
+        <div class="row">
+            <div class="column">1</div>
+            <div class="column">2</div>
+            <div class="column">3</div>
+            <div class="column">4</div>
+            <div class="column">5</div>
+        </div>
+        <div class="row">
+            <div class="column">6</div>
+            <div class="column">7</div>
+            <div class="column">8</div>
+            <div class="column">9</div>
+            <div class="column">10</div>
+        </div>
+        <div class="row">
+            <div class="column">11</div>
+            <div class="column">12</div>
+            <div class="column">13</div>
+            <div class="column">14</div>
+            <div class="column">15</div>
+        </div>
+        <div class="row">
+            <div class="column">16</div>
+            <div class="column">17</div>
+            <div class="column">18</div>
+            <div class="column">19</div>
+            <div class="column">20</div>
+        </div>
+        <div class="row">
+            <div class="column">21</div>
+            <div class="column">22</div>
+            <div class="column">23</div>
+            <div class="column">24</div>
+            <div class="column">25</div>
+        </div>
+    </div>
+    <hr>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;edu.kh.array2.practice&apos; to &apos;04_array/src&apos;&#x0D;&#x0A;- Original project: &apos;05_array2&apos;&#x0D;&#x0A;- Destination element: &apos;04_array/src&apos;&#x0D;&#x0A;- Original element: &apos;05_array2/src/edu.kh.array2.practice&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=04_array/src" element1="/src&lt;edu.kh.array2.practice" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1646565896656" version="1.0"/>
+</session>

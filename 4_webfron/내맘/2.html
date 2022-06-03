@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> 제목 </title>
+   <link rel="stylesheet" href="">
+</head>
+<body>
+    <fieldset>
+        <legend>회원 가입 양식</legend>
+        <form action="#" method="post">
+            <!--  onsubmit="return act()" -->
+            <table>
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" id="id"></td>
+                    <td><button type="button">중복확인</button></td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input type="password" id="pass"></td>
+                    <td id="confirm"></td>
+                </tr>
+                <tr>
+                    <td>비밀번호 확인</td>
+                    <td><input type="password" id="passChk"></td>
+                </tr>
+                <tr>
+                    <td>이름</td>
+                    <td><input type="text" id="name"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>성별</td>
+                    <td>
+                        <label for="m">남<input type="radio" name="gender" id="m" value="m"></label>
+                        <label for="weman">여<input type="radio" name="gender" id="w" value="w"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>전화번호</td>
+                    <td><input type="text" id="tel"></td>
+                </tr>
+                <tr>
+                    <td>이메일</td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+            <button type="reset">초기화</button>
+            <button id="submit">제출</button>
+        </form>
+    </fieldset>
+    <script src="../4_jQuery/js/jquery-3.6.0.min.js"></script>
+    <script src="2.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+.board-detail{
+    width: 1000px;
+    min-height: 700px;
+    border: 1px solid #ccc;
+    margin : 50px auto;
+    border-radius: 3px;
+    padding: 20px;
+}
+.board-title{
+    margin: 0;
+    padding: 20px 0;
+    font-size: 2em;
+    border-bottom: 3px solid #ccc;
+}
+.board-header{
+    padding: 20px 0;
+    border-bottom: 3px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+.board-writer{
+    display: flex;
+    align-items: center;
+}
+.board-writer img{
+    width: 40px;
+    height: 40px;
+}
+.board-writer span{
+    font-weight: bold;
+    margin-left: 10px;
+}
+.board-info{
+    width: 320px;
+    font-size: 0.8em;
+}
+.board-info>p{
+    margin: 0;
+}
+.board-info span{
+    width: 120px;
+    display: inline-block;
+    font-weight: bold;
+}
+.img-box{
+    display: flex;
+    justify-content: space-between;
+}
+.boardImg{
+    width: 230px;
+    height: 230px;
+    display: inline-block;
+    text-align: center;
+}
+.boardImg img{
+    max-width: 90%;
+    max-height: 90%;
+}
+.thumbnail{
+    width: 300px;
+    height: 300px;
+}
+.boardImg a{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.boardImg a:hover{
+    text-decoration: underline;
+}
+.board-content{
+    padding: 30px 0;
+    margin: 30px 0;
+    border-top: 3px solid #ccc;
+    border-bottom: 3px solid #ccc;
+    font-size: 18px;
+}
+.board-btn-area{
+    text-align: right;
+}
+.board-btn-area button{
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    border: 0;
+    background-color: #455ba8;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.board-btn-area button:hover{
+    background-color: white;
+    color: #455ba8;
+    border: 2px solid #455ba8;
+    transition-duration: 120ms;
+}
+.board-title>span{
+    font-size: 20px;
+    color: #ccc;
+}

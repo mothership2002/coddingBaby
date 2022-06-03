@@ -1,0 +1,9 @@
+package edu.kh.SemiProject.member.controller;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet()
+public class loginServlet extends HttpServlet{
+
+}

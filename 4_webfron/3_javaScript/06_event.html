@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> 이벤트 </title>
+    <style>
+        #test3{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: tomato;
+        }
+        #div1{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>이벤트</h1>
+    <pre>
+        event : 동작,행위
+        브라우저에서의 동작,행위
+        https://www.w3schools.com/jsref/dom_obj_event.asp
+    </pre>
+    <hr>
+    <h3>인라인 이벤트 모델</h3>
+    <pre>
+        요소 내부에 이벤트를 작성하는 방법으로
+        onEventName = function()
+    </pre>
+    <button onclick="test1(this)">inline event model</button>
+    <hr>
+    <h3>고전 이벤트 모델</h3>
+    <pre>
+        요소가 가지고 있는 이벤트 속성에
+        이벤트 핸들러를 연결하는 방법
+    </pre>
+    <button id="test2-1">classic event model</button><br>
+    <button id="test2-2">remove event</button><br>
+    <button id="test2-3">고전 이벤트 모델 단점</button>
+    맨 하단 기능만 수행<br>
+    <hr>
+    <h3>표준 이벤트 모델</h3>
+    <pre>
+        - W3C (HTML,CSS,JS 웹 표준 재정 단체)에서
+          공식적으로 지정한 이벤트 모델
+        - 한 요소에 여러 이벤트 핸들러를 설정 가능  
+    </pre>
+    <div id="test3">클릭 시 크기 확대</div>
+    <hr>
+    <div id="div1"></div>
+    <input type="text" id="inputColor">
+    <button id="changeBtn1">변경</button>
+    <hr>
+    <h1 style="color: red;">html요소 기본 이벤트 제거</h1>
+    <a href="https://www.naver.com/" id="linkedNaver">네이버로 이동</a>
+    <hr>
+    <h3>form태그 기본 이벤트 제거</h3>
+    <h4>1) submit 버튼 사용 X</h4>
+    <form action="01_js개요.html" name="testForm1">
+        입력 : <input type="text" name="in1" id="in1">
+        <button type="button" id="testBtn1">제출하기</button>
+    </form>
+    <h4>2) onsubmit 사용</h4>
+    <form action="01_js개요.html" onsubmit="return checkIn2()">
+        입력 : <input type="text" name="in2" id="in2">
+        <button>제출하기</button>
+    </form>
+
+    <!-- 마지막에 작성하는 이유 : 랜더링 후 이벤트 처리 -->
+    <!-- 헤드에 추가 시, 페이지 로딩 소요시간 증가 -->
+    <script src="js/06_event.js"></script>
+</body>
+</html>

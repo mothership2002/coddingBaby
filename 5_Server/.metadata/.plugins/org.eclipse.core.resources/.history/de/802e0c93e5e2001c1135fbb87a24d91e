@@ -1,0 +1,23 @@
+package edu.kh.test.user.model.service;
+
+import static edu.kh.test.common.JDBCTemplate.*;
+
+import java.sql.Connection;
+import java.util.List;
+
+import edu.kh.test.user.model.vo.User;
+
+/**
+ * @author user
+ *
+ */
+public class UserService {
+	
+	private Connection conn;
+
+	public List<User> searchUser(int userNo) throws Exception{
+		List<User> result = dao.searchUser(conn,userNo);
+		return result;
+	}
+	
+}

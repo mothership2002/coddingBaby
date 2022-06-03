@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;edu.kh.inheritance.model.vo.Students&apos; to &apos;Student&apos;&#x0D;&#x0A;- Original project: &apos;08_inheritance&apos;&#x0D;&#x0A;- Original element: &apos;edu.kh.inheritance.model.vo.Students&apos;&#x0D;&#x0A;- Renamed element: &apos;edu.kh.inheritance.model.vo.Student&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Students&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;edu.kh.inheritance.model.vo{Students.java[Students" matchStrategy="1" name="Student" qualified="false" references="true" similarDeclarations="false" stamp="1646896736868" textual="false" version="1.0"/>
+</session>

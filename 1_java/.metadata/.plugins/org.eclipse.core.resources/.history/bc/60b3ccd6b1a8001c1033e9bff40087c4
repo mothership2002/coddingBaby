@@ -1,0 +1,12 @@
+import java.util.ArrayList;
+
+public class asdf {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> num	= new ArrayList<Integer>();
+		
+		
+	}
+
+}

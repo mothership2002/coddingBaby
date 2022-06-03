@@ -1,0 +1,89 @@
+img{
+    width: 250px;
+    height: auto;
+}
+.sd-trans-x:hover{
+    /* ms,webkit,o,moz */
+    -ms-transform: translateX(100px);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);    
+}
+.sd-trans-y:hover{
+    -ms-transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+}
+.sd-trans-d:hover{
+    -ms-transform: translate(100px,100px);
+    -webkit-transform: translate(100px,100px);
+    transform: translate(100px,100px);
+}
+
+.trans-x-scale-2d:hover{
+    -webkit-transform: scaleX(2);
+    transform: scaleX(2);
+    margin-left : 200px;
+}
+.trans-y-scale-2d:hover{
+    transform: scaleY(2);
+    margin : 100px auto;
+
+}
+.trans-d-scale-2d:hover{
+    transform: scale(50%);
+}
+.trans-rotate:hover{
+    transform: rotate(180deg);
+}
+.trans-3d:hover{
+    /* transform: perspective(300px) translateZ(100px);  */
+    transform: perspective(300px) translate3d(50px,50px,100px); 
+}
+.trans-rotate-x-3d:hover{
+    transform: perspective(300px) rotateX(70deg);
+}
+.trans-rotate-y-3d:hover{
+    transform: perspective(300px) rotateY(-45deg);
+    transition-duration: 1s;
+}
+.trans-rotate-z-3d:hover{
+    transform: perspective(300px) rotateZ(-45deg);
+    transition-duration: 1s;
+}
+.trans-rotate-3d:hover{
+    transform: perspective(300px) rotate3d(0.5,0.5,0.5,45deg);
+    transition-duration: 1s;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    background-color: red;
+    /* 스타일 변경소요 시간 지정 */
+    transition-duration: 0.9s;
+}
+.test1:hover{
+    background-color: yellow;
+}
+.test2:hover{
+    transform: rotate(900000deg);
+    background-color: aqua;
+    border-radius: 50%;
+}
+.test3{
+    transition-duration: 3000ms;
+    transition-timing-function:linear;
+    /*  linear | ease | ease-in | ease-out | ease-in-out | cublic-bezier(n,n,n,n) */
+    /* transition-timing-function: cubic-bezier(0.3, 0.3, 1, 0.5);   */
+}
+.test3:hover{
+    background-color: springgreen;
+    transform: rotate(7200deg);
+    border-radius: 50%;
+}
+.test4{
+    transition-delay: 50ms;
+}
+.test4:hover{
+    transform: translateX(100px);
+}

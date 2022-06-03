@@ -1,0 +1,51 @@
+#test1>p:first-child{
+    background-color: red;
+    color: white;
+}
+#test1>p:last-child{
+    background-color: orange;
+
+}
+#test1>p:nth-child(5){
+    background-color: orange;
+}
+#test1>p:nth-child(2n-1){
+    font-weight: bold;
+    font-size
+    : 20px;
+}
+#test1>p:nth-child(2n){
+    border : 1px solid black;
+}
+#test1>p:nth-last-child(3){
+    background-color: aqua;
+}
+
+
+
+#test2>p:first-of-type{
+    background-color: olive;
+}
+#test2>p:last-of-type{
+    background-color: dimgray;
+    color: white;
+}
+#test2>p:nth-of-type(2n){
+    background-color: darksalmon;
+    color: white;
+}
+#test2>p:nth-last-of-type(3){
+    background-color: green;
+    color: white;
+}
+#test2>pre:nth-of-type(n){
+    background-color: lime;
+    color: white;
+}
+#test2>p:nth-of-type(2n-1){
+    font-size: 20px;
+}
+
+#test3>li:not(:nth-child(3n)){
+    background-color: rgb(219, 154, 154);
+}

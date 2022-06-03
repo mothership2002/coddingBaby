@@ -1,0 +1,34 @@
+
+#size-test>li:first-child{font-size: 24px;}
+#size-test>li:nth-child(2){font-size: 18pt;}
+#size-test>li:nth-child(3){font-size: 150%;}
+#size-test>li:last-child{font-size: 1em;}
+#weight-test>li:first-child{font-weight: 400;}
+#weight-test>li:nth-child(2){font-weight: bold;}
+#weight-test>li:nth-child(3){font-weight: bolder;}
+#weight-test>li:nth-child(4){font-weight: lighter;}
+#weight-test>li:nth-child(5){font-weight: normal; font-style: inherit;}
+
+#family-test1>li:nth-child(1){
+    font-family: '궁서';
+}
+#family-test1>li:nth-child(2){
+    font-family: '배달의민족','굴림체'
+}
+#family-test2>li:nth-child(3){
+    font-family: 'Stylish', sans-serif;
+}
+#family-test2>li:nth-child(1){
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+@font-face {
+    font-family: 'SDSamliphopangche_Outline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#family-test2>li:nth-child(2){
+    font-family: 'SDSamliphopangche_Outline';
+}
