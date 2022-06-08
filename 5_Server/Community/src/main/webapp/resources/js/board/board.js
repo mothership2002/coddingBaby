@@ -1,4 +1,3 @@
-
 (function(){
     const goToListBtn = document.getElementById("goToListBtn");
     if(goToListBtn != null){
@@ -22,7 +21,8 @@
 (function(){
     const thumbnail = document.getElementsByClassName("list-thumbnail");
 
-    if(thumbnail.length > 0){ // 목록에 썸네일 이미지가 있을 경우에만 이벤트 추가
+    if(thumbnail.length > 0){ 
+        // 목록에 썸네일 이미지가 있을 경우에만 이벤트 추가
         const modal = document.querySelector('.modal');
         const modalImage = document.getElementById("modal-image");
         const modalClose = document.getElementById("modal-close");
@@ -43,8 +43,38 @@
                 modal.classList.toggle('show');
             },450);
         });
-
-
     }
+})();
+(function(){
+    const deleteBtn = document.getElementById("removeBtn");
+    if(deleteBtn != null){
+        deleteBtn.addEventListener("click",function(){
+            if(confirm("삭제 하시겠습니까?")){
+                let url = "delete";
+                const params = new URL(location.href).searchParams;
+                const no = params.get("no");
+                const type = params.get("type");
+                location.href = url+"?type="+type+"&no="+no;
+                //get방식
+            };
+        });
+    }
+})();
 
+(function(){
+    const select = document.getElementsByName("key")[0];
+    const option = select.children;
+    const searchValue = document.getElementById("search-query");
+    if(select != null){
+        const params = new URL(location.href).searchParams;
+        const key = params.get("key");
+        const query = params.get("query");
+        searchValue.value = query;
+
+        for(let op of option){
+            if(op.value == key){
+                op.select = true;
+            }
+        }
+    }
 })();

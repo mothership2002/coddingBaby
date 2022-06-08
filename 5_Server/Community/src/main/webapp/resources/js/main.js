@@ -103,5 +103,5 @@ function selectAll(){
 
 (function(){
     selectAll();
-    window.setInterval(selectAll,10000);
+    window.setInterval(selectAll,1000);
 })()

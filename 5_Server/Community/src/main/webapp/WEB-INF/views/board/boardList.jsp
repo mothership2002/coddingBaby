@@ -18,8 +18,14 @@
 <body>
     <main>
         <jsp:include page="/WEB-INF/views/common/header.jsp"/>
+        <c:if test="${!empty param.key}">
+            <c:set var="sURL">&key=${param.key}&query=${param.query}</c:set>
+        </c:if>
         <section class="board-list">
             <h1 class="board-name">${boardName}</h1>
+            <c:if test="${!empty param.key}">
+                <h3 style="margin-left: 30px; color: rgb(147, 147, 147);">"${param.query}" 검색 결과</h3>
+            </c:if>
             <div class="list-wrapper">
                 <table class="list-table">
                     <thead>
@@ -47,7 +53,7 @@
                                         <c:if test="${!empty board.thumbnail}">
                                             <img src="${contextPath}${board.thumbnail}" class="list-thumbnail">
                                         </c:if>
-                                        <a href="detail?type=${param.type}&cp=${pagination.currentPage}&no=${board.boardNo}">${board.boardTitle}</a>
+                                        <a href="detail?type=${param.type}&cp=${pagination.currentPage}&no=${board.boardNo}${sURL}">${board.boardTitle}</a>
                                     </td>
 		                            <td>
                                         <a href="#">${board.memberNickName}</a>
@@ -70,8 +76,8 @@
             <div class="pagination-area">
             	<c:set var="url" value="list?type=${param.type}&cp="></c:set>
                 <ul class="pagination">
-                    <li><a href="${url}1">&lt;&lt;</a></li>
-                    <li><a href="${url}${pagination.prevPage}">&lt;</a></li>
+                    <li><a href="${url}1${sURL}">&lt;&lt;</a></li>
+                    <li><a href="${url}${pagination.prevPage}${sURL}">&lt;</a></li>
 
                     <%-- <li><a href="${contextPath}/board/list?type=${param.type}&cp=2">2</a></li> --%>
 					<c:forEach var="i" begin="${pagination.startPage}"
@@ -81,22 +87,23 @@
 								<li><a class="current">${pagination.currentPage}</a></li>
 							</c:when>
 							<c:otherwise>
-								<li><a href="${url}${i}">${i}</a></li>
+								<li><a href="${url}${i}${sURL}">${i}</a></li>
 							</c:otherwise>
 						</c:choose>
 					</c:forEach>
-                    <li><a href="${url}${pagination.nextPage}">&gt;</a></li>
-                    <li><a href="${url}${pagination.maxPage}">&gt;&gt;</a></li>
+                    <li><a href="${url}${pagination.nextPage}${sURL}">&gt;</a></li>
+                    <li><a href="${url}${pagination.maxPage}${sURL}">&gt;&gt;</a></li>
                 </ul>
             </div>
-            <form action="#" method="get" id="boardSearch">
-                <select name="key" id="">
+            <form action="list" method="get" id="boardSearch">
+                <input type="hidden" name="type" value="${param.type}">
+                <select name="key">
                     <option value="t">제목</option>
                     <option value="c">내용</option>
                     <option value="tc">제목+내용</option>
                     <option value="w">작성자</option>
                 </select>
-                <input type="text" name="query" placeholder="검색어를 입력해주세요.">
+                <input type="text" name="query" id="search-query" placeholder="검색어를 입력해주세요.">
                 <button>검색</button>
             </form>
         </section>

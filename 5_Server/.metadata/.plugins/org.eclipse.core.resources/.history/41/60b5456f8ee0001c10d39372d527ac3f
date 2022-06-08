@@ -1,8 +1,0 @@
-package edu.kh.community.common;
-
-import com.oreilly.servlet.multipart.FileRenamePolicy;
-
-public class MyRenamePolicy implements FileRenamePolicy{
-	
-	
-}

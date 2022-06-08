@@ -183,4 +183,111 @@ public class BoardDao {
 		}
 		return result;
 	}
+	
+	public int updateBoard(Connection conn, BoardDetail detail)throws Exception{
+		int result = -10;
+		try {
+			pstmt = conn.prepareStatement(prop.getProperty("updateBoard"));
+			pstmt.setString(1, detail.getBoardTitle());
+			pstmt.setString(2, detail.getBoardContent());
+			pstmt.setInt(3, detail.getBoardNo());
+			
+			result = pstmt.executeUpdate();
+			
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+	
+	public int updateImage(Connection conn, BoardImage img) throws Exception {
+		int result = -10;
+		try {
+			pstmt = conn.prepareStatement(prop.getProperty("updateImage"));
+			pstmt.setString(1, img.getImageRename());
+			pstmt.setString(2, img.getImageOriginal());
+			pstmt.setInt(3, img.getImageLevel());
+			pstmt.setInt(4, img.getBoardNo());
+			
+			result = pstmt.executeUpdate();
+			
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+	public int deleteImage(Connection conn, int boardNo,String deleteList) throws Exception{
+		int result = -10;
+		try {
+			pstmt = conn.prepareStatement(prop.getProperty("deleteImage") + 
+					deleteList+")");
+			pstmt.setInt(1, boardNo);
+			//참 독특한 꼼수네
+			result = pstmt.executeUpdate();
+			
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+	public int deleteBoard(Connection conn, int boardNo) throws Exception{
+		int result = -10;
+		try {
+			pstmt = conn.prepareStatement(prop.getProperty("deleteBoard"));
+			pstmt.setInt(1, boardNo);
+			result = pstmt.executeUpdate();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+	public int searchListCount(Connection conn, int type, String condition) throws Exception {
+		int result = -10;
+		try {
+			pstmt = conn.prepareStatement(prop.getProperty("searchListCount") 
+					+ condition);
+			pstmt.setInt(1, type);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				result = rs.getInt(1);
+			}
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		return result;
+	}
+	
+	public List<Board> searchBoardList(Connection conn, Pagination pagination,
+									int type, String condition) throws Exception{
+		List<Board> list = new ArrayList<Board>();
+		try {
+			int start = (pagination.getCurrentPage()-1)*pagination.getLimit()+1;
+			int end = start + pagination.getLimit()-1; 
+			
+			pstmt = conn.prepareStatement(prop.getProperty("searchBoardList1") + 
+					condition + prop.getProperty("searchBoardList2"));
+			pstmt.setInt(1, type);
+			pstmt.setInt(2, start);
+			pstmt.setInt(3, end);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				Board board = new Board();
+				board.setBoardNo(rs.getInt("BOARD_NO"));
+				board.setBoardTitle(rs.getString("BOARD_TITLE"));
+				board.setMemberNickName(rs.getString("MEMBER_NICK"));
+				board.setCreateDate(rs.getString("CREATE_DT"));
+				board.setReadCount(rs.getInt("READ_COUNT"));
+				board.setThumbnail(rs.getString("THUMBNAIL"));
+				list.add(board);
+			}
+			
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		return list;
+	}
 }

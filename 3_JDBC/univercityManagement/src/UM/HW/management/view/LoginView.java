@@ -32,8 +32,11 @@ public class LoginView {
 				pw = sc.next();
 				System.out.print("패스워드 확인 : ");
 				String pwChk = sc.next();
-				if(pw.equals(pwChk)) break;
-				else   				 System.out.println("\n패스워드가 일치하지 않습니다.\n");
+				if(pw.equals(pwChk)) {
+					break;
+				} else {
+  					System.out.println("\n패스워드가 일치하지 않습니다.\n");
+				}
 			}
 			
 			System.out.print("성함 : ");

@@ -2,6 +2,10 @@ const inputImage = document.getElementsByClassName("input-img");
 const preview = document.getElementsByClassName("preview");
 const deleteImage = document.getElementsByClassName("delete-image");
 
+const deleteList = document.getElementById("deleteList")
+const deleteSet = new Set();
+
+
 for(let i=0;i<inputImage.length;i++){
     inputImage[i].addEventListener("change",function(){
         if(this.files[0] != undefined){
@@ -9,14 +13,18 @@ for(let i=0;i<inputImage.length;i++){
             reader.readAsDataURL(this.files[0]);  // 파일 url따오기
             reader.onload = function(e){      // 적제 완료 시 
                 preview[i].setAttribute("src",e.target.result);
+                deleteSet.delete(i);
             }
         } else {
             preview[i].removeAttribute("src");
         }
     });
     deleteImage[i].addEventListener("click",function(){
-        inputImage[i].value = "";
-        preview[i].removeAttribute("src");
+        if(preview[i].getAttribute("src") != ""){
+            inputImage[i].value = "";
+            preview[i].removeAttribute("src");
+            deleteSet.add(i);
+        }
     });
 }
 
@@ -38,4 +46,8 @@ document.getElementById("writeBtn").addEventListener("click",function(e){
         e.preventDefault();
         return;
     }
+    //js배열은 html요소 또는 콘솔로 출력하면 문자열로 반환
+    deleteList.value = Array.from(deleteSet);
+
 })
+

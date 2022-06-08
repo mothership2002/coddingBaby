@@ -1,9 +1,0 @@
-package edu.kh.SemiProject.member.model.vo;
-
-public class Member {
-	
-	private String memberID;
-	private String memberPW;
-	private int memberNo;
-	private String memberTel
-}

@@ -5,12 +5,12 @@ import static edu.kh.community.common.JDBCTemplate.*;
 import java.sql.Connection;
 import java.util.List;
 
-import edu.kh.community.board.model.dao.replyDAO;
+import edu.kh.community.board.model.dao.ReplyDAO;
 import edu.kh.community.board.model.vo.Reply;
 import edu.kh.community.common.Util;
 
 public class ReplyService {
-	private replyDAO dao = new replyDAO();
+	private ReplyDAO dao = new ReplyDAO();
 
 	/** 댓글 목록 조회 서비스
 	 * @param boardNo

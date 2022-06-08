@@ -1,9 +1,0 @@
-package edu.kh.community.common;
-
-public class Util {
-	
-	public static String newLineHandlling(String content) {
-		return content.replaceAll("(\\n|\\r|\\r\\n|\\n\\r)\", \"<br>\", content)
-	}
-
-}

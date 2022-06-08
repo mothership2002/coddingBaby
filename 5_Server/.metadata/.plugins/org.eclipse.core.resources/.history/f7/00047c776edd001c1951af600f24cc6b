@@ -1,7 +1,0 @@
-package edu.kh.community.board.model.vo;
-
-public class Reply {
-	
-	private int replyNo;
-	private String replyContent;
-}

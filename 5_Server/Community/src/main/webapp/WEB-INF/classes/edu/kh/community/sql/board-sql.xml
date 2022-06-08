@@ -67,4 +67,64 @@ VALUES(?,?,?,DEFAULT,DEFAULT,DEFAULT,DEFAULT,?,?)
 INSERT INTO BOARD_IMG
 VALUES(SEQ_IMG_NO.NEXTVAL,?,?,?,?)
 </entry>
+
+<entry key="updateBoard">
+UPDATE BOARD SET
+BOARD_TITLE = ? ,
+BOARD_CONTENT = ? , 
+UPDATE_DT = SYSDATE 
+WHERE BOARD_NO = ?
+</entry>
+
+<entry key="updateImage">
+UPDATE BOARD_IMG SET
+IMG_RENAME = ?,
+IMG_ORIGINAL = ?
+WHERE IMG_LEVEL = ?
+AND BOARD_NO = ?
+</entry>
+
+<entry key="deleteImage">
+DELETE FROM BOARD_IMG
+WHERE BOARD_NO = ?
+AND IMG_LEVEL IN (
+</entry>
+
+<entry key="deleteBoard">
+UPDATE BOARD SET
+BOARD_ST = 'Y'
+WHERE BOARD_NO = ?
+</entry>
+
+<entry key="searchListCount">
+SELECT COUNT(*) FROM BOARD
+JOIN MEMBER USING(MEMBER_NO)
+WHERE BOARD_ST ='N'
+AND BOARD_CD = ? 
+</entry>
+
+<entry key="searchBoardList1">
+SELECT * FROM (
+    SELECT ROWNUM RNUM, A.* FROM (
+        SELECT  BOARD_NO,BOARD_TITLE,MEMBER_NICK,
+        		TO_CHAR(CREATE_DT,'YYYY-MM-DD') AS CREATE_DT,
+        		READ_COUNT,
+				(SELECT IMG_RENAME 
+				 FROM BOARD_IMG
+				 WHERE IMG_LEVEL = 0
+				 AND BOARD_IMG.BOARD_NO = BOARD.BOARD_NO) THUMBNAIL
+        FROM BOARD
+        JOIN MEMBER USING(MEMBER_NO)
+        WHERE BOARD_CD = ?
+        AND BOARD_ST = 'N' 
+        
+</entry>
+
+<entry key="searchBoardList2">
+        ORDER BY BOARD_NO DESC
+    ) A
+)
+WHERE RNUM BETWEEN ? AND ?
+</entry>
+
 </properties>

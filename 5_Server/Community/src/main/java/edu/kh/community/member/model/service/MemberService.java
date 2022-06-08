@@ -39,6 +39,7 @@ public class MemberService {
 		int result = dao.updateInfo(conn,updateMember);
 		if(result >0) commit(conn);
 		else		  rollback(conn);
+		close(conn);
 		return result;
 	}
 
@@ -47,6 +48,7 @@ public class MemberService {
 		int result = dao.updatePW(conn,memberNo,sendPw);
 		if(result > 0) commit(conn);
 		else		   rollback(conn);
+		close(conn);
 		return result;
 	}
 
@@ -55,6 +57,7 @@ public class MemberService {
 		int result = dao.secessionAgree(conn,memberNo,secessionAgree);
 		if(result>0)	commit(conn);
 		else			rollback(conn);
+		close(conn);
 		return result;
 	}
 

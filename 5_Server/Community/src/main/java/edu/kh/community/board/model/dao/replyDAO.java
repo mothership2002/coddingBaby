@@ -6,7 +6,6 @@ import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -14,18 +13,17 @@ import java.util.Properties;
 import edu.kh.community.board.model.vo.Reply;
 
 
-public class replyDAO {
+public class ReplyDAO {
 	
-	private Statement stmt;
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	
 	private Properties prop;
 	
-	public replyDAO() {
+	public ReplyDAO() {
 		try {
 			prop = new Properties();
-			String filePath = replyDAO.class.getResource("/edu/kh/community/sql/reply-sql.xml").getPath();
+			String filePath = ReplyDAO.class.getResource("/edu/kh/community/sql/reply-sql.xml").getPath();
 			prop.loadFromXML(new FileInputStream(filePath));
 
 		}catch (Exception e) {
@@ -51,8 +49,8 @@ public class replyDAO {
 				rList.add(r);
 			}
 		} finally {
-			close(pstmt);
 			close(rs);
+			close(pstmt);
 		}
 		return rList;
 	}

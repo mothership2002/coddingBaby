@@ -25,12 +25,20 @@ public class BoardWriteController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String mode = req.getParameter("mode");
-		if(mode.equals("update")) {
-			
+		try {
+			String mode = req.getParameter("mode");
+			if(mode.equals("update")) {
+				int boardNo = Integer.parseInt(req.getParameter("no"));
+				BoardDetail detail = new BoardService()
+						.selectBoardDeatil(boardNo);
+				detail.setBoardContent(detail.getBoardContent().replaceAll("<br>","\n"));
+				req.setAttribute("detail", detail);
+			}
+			String path = "/WEB-INF/views/board/boardWriteForm.jsp";
+			req.getRequestDispatcher(path).forward(req, resp);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		String path = "/WEB-INF/views/board/boardWriteForm.jsp";
-		req.getRequestDispatcher(path).forward(req, resp);
 	}	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -59,7 +67,6 @@ public class BoardWriteController extends HttpServlet{
 					image.setImageOriginal(originalName);
 					image.setImageRename(folderPath + rename);
 					image.setImageLevel(Integer.parseInt(name));
-//					image.setBoardNo(boardType);
 					imageList.add(image);
 				}
 			}
@@ -93,7 +100,26 @@ public class BoardWriteController extends HttpServlet{
 				resp.sendRedirect(path);
 			}
 			if(mode.equals("update")) {
+				int cp = Integer.parseInt(mpReq.getParameter("cp"));
+				boardNo = Integer.parseInt(mpReq.getParameter("no"));
+				String deleteList = mpReq.getParameter("deleteList");
+				detail.setBoardNo(boardNo);
 				
+				int result = service.updateBoard(imageList,detail,deleteList);
+				
+				String path = null;
+				String message = null;
+				if(result>0) {
+					path = "detail?type="+boardCode+"&cp="+cp+"&no="+boardNo;
+					message = "게시글이 수정 되었습니다.";
+				} else {
+//					path = "update?mode="+mode+"&type="+boardCode+"&cp="+cp+"&no="+boardNo+"";
+					path = req.getHeader("referer");
+					message = "게시글 수정이 실패 했습니다."
+							+ "\n다시 시도해주세요.";
+				}
+				session.setAttribute("message", message);
+				resp.sendRedirect(path);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

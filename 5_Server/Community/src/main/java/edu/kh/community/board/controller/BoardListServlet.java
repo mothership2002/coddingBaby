@@ -25,7 +25,14 @@ public class BoardListServlet extends HttpServlet{
 			}
 			
 			BoardService service = new BoardService();
-			Map<String, Object> map = service.selectBoardList(type,cp);
+			Map<String, Object> map = null;
+			if(req.getParameter("key") ==null) {
+				map = service.selectBoardList(type,cp);
+			} else {
+				String key = req.getParameter("key");
+				String query = req.getParameter("query");
+				map = service.searchBaordList(type,cp,key,query);
+			}
 			req.setAttribute("map", map);
 			
 			String path = "/WEB-INF/views/board/boardList.jsp";

@@ -81,8 +81,14 @@
             
             <div class="board-btn-area">
             	<c:if test="${sessionScope.loginMember.memberNo == detail.memberNo}">
-            	    <button id="updateBtn">수정</button>
-                	<button id="removeBtn">삭제</button>
+					<c:if test="${empty param.cp}">
+						<c:set var="cp">1</c:set>
+					</c:if>
+					<c:if test="${!empty param.cp}">
+						<c:set var="cp">${param.cp}</c:set>
+					</c:if>
+            	    <button id="updateBtn" onclick="location.href='write?mode=update&type=${param.type}&cp=${cp}&no=${detail.boardNo}'">수정</button>
+                	<button id="removeBtn" onclick="">삭제</button>
             	</c:if>
                 <button id="goToListBtn">목록으로</button>
             </div>

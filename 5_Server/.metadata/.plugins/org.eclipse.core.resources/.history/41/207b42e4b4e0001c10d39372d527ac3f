@@ -1,8 +1,0 @@
-package edu.kh.SemiProject.member.model.service;
-
-import edu.kh.SemiProject.member.model.dao.UserDAO;
-
-public class UserService {
-	
-	private UserDAO dao = new UserDAO()
-}
