@@ -1,0 +1,6 @@
+package edu.kh.SemiProject.board.model.vo;
+
+public class Pagination {
+	private int boardNo;
+	
+}

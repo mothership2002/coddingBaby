@@ -1,0 +1,7 @@
+package edu.kh.SemiProject.board.controller;
+
+import javax.servlet.http.HttpServlet;
+
+public class MainBoardController extends HttpServlet{
+
+}

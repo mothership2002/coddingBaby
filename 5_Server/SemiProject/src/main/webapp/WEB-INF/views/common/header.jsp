@@ -22,7 +22,7 @@
             </ul>
         </div>
         <div>
-            <a href="#"><img src="" alt="등급이미지"></a>
+            <img src="" alt="등급이미지">
             <a href="#"><img src="resources/images/letter-removebg-preview_negative.png" alt=""></a>
             <a href="#"><img src="resources/images/pngwing.com.png" alt="" id="people"></a>
             <input type="text" name="search-area" id="search" >

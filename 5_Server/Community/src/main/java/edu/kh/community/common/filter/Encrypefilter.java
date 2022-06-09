@@ -18,9 +18,9 @@ import edu.kh.community.common.wrapper.EncryptWrapper;
 @WebFilter(filterName="encrypeFilter", 
 			urlPatterns = {"/member/login","/member/signUp","/member/myPage/updatePW",
 					"/member/myPage/secession"})
-public class Encrypefilter extends HttpFilter implements Filter {
+public class EncrypeFilter extends HttpFilter implements Filter {
 
-	public Encrypefilter() {
+	public EncrypeFilter() {
         super();
     }
 

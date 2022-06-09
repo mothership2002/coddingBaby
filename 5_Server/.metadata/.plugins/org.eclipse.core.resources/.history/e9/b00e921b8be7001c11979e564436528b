@@ -1,0 +1,26 @@
+package edu.kh.SemiProject.board.model.service;
+
+import static edu.kh.SemiProject.common.JDBCTemplate.*;
+
+import java.sql.Connection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import edu.kh.SemiProject.board.model.dao.BoardDAO;
+import edu.kh.SemiProject.board.model.vo.ShowWindowInfo;
+
+public class BoardService {
+
+	private BoardDAO dao = new BoardDAO();
+
+	public Map<String, Object> mainBoardSelect() throws Exception{
+		Connection conn = getConnection();
+		Map<String, Object> result = new HashMap<String, Object>();
+		List<ShowWindowInfo> showList= dao.mainBoardSelect(conn);
+		
+		close(conn);
+		return result ;
+	}
+	
+}

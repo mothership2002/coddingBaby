@@ -1,0 +1,52 @@
+package edu.kh.SemiProject.main.controller;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import edu.kh.SemiProject.board.model.service.BoardService;
+import edu.kh.SemiProject.board.model.vo.ShowWindowInfo;
+
+@WebServlet("/main")
+public class MainServlet extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		try {
+			BoardService service = new BoardService();
+			String boardType = null;
+			Map<String, Object> map = new HashMap<String, Object>();
+			for(int i=0;i<5;i++) {
+				List<ShowWindowInfo> sList = service.mainBoardSelect(i);
+				switch(i) {
+					case 0 : boardType = "hot";
+						break;
+					case 1 : boardType = "new";
+						break;
+					case 2 : boardType = "exercise";
+						break;
+					case 3 : boardType = "free";
+						break;
+					default : boardType = "met";
+				}
+				map.put(boardType, sList);
+			}
+			req.setAttribute("map", map);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		req.getRequestDispatcher("main.jsp").forward(req, resp);
+		
+		// 서비스 호출
+		// req.setAttribute()
+	
+		// main.jsp 포워드
+	}
+}

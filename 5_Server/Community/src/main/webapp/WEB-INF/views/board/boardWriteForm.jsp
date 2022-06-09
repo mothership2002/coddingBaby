@@ -89,7 +89,7 @@
                 	<button type="button" id="goToListBtn">목록으로</button>
             	</c:if>
             	<c:if test="${param.mode == 'update'}">
-                	<button type="button" onclick="loaction.href='${header.referer}'">이전으로</button>
+                	<button type="button" onclick="location.href='${header.referer}'">이전으로</button>
             	</c:if>
             </div>
             <input type="hidden" name="mode" value="${param.mode}">
@@ -100,9 +100,6 @@
         </form>
     </main>
         <jsp:include page="/WEB-INF/views/common/footer.jsp"/>
-        <a href=#top>
-            <button id="page-top" class="fa-duotone fa-eject"></button>
-        </a>
         <script src="${contextPath}/resources/js/board/board.js"></script>
         <script src="${contextPath}/resources/js/board/boardWriteForm.js"></script>
 </body>

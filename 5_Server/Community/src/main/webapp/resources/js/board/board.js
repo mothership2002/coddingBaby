@@ -4,16 +4,22 @@
         goToListBtn.addEventListener("click",function(){
             const pathName = location.pathname;
             let a = pathName.substring(0,pathName.indexOf("/",1));
-            a += '/board/list?';
             const params = new URL(location.href).searchParams;
             const type = "type=" + params.get("type");
+            let url = a + '/board/list?';
             let cp;
             if(params.get("cp")!=null){
                 cp = "cp=" + params.get("cp");
             }else{
                 cp = "cp=1";
             }
-            location.href = a+type+"&"+cp;
+            url += type+"&"+cp;
+            if(params.get("key")!=null){
+                const key = "&key="+params.get("key");
+                const query = "&query="+params.get("query");
+                url += key + query;
+            }
+            location.href = url;
         });
     }
 })();
@@ -45,6 +51,7 @@
         });
     }
 })();
+
 (function(){
     const deleteBtn = document.getElementById("removeBtn");
     if(deleteBtn != null){
@@ -78,3 +85,13 @@
         }
     }
 })();
+
+function searchValidate(){
+    const searchValue = document.getElementById("search-query");
+    if(searchValue.value.trim().length == 0){
+        alert("검색어를 입력해주세요.")
+        this.focus();
+        return false;
+    }
+    return true;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>board-sql.xml</comment>
+
+<entry key="hotBaord">
+	SELECT BOARD_NO A,BOARD_TITLE,
+		   (SELECT COUNT(*) 
+		   FROM LIKE
+		   WHERE BOARD_NO ) LIKE_COUNT,
+		   (SELECT COUNT(*)
+		   FROM REPLY
+		   WHERE BOARD_NO ) REPLY_COUNT,
+		   MEMBER_NICK,
+		   TO_CHAR(),
+		   
+</entry>
+
+<entry key="newBaord">
+	
+</entry>
+
+<entry key="exerciseBaord">
+	
+</entry>
+
+<entry key="freeBaord">
+	
+</entry>
+
+<entry key="metBaord">
+	
+</entry>
+
+</properties>

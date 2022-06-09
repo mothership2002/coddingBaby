@@ -95,7 +95,7 @@
                     <li><a href="${url}${pagination.maxPage}${sURL}">&gt;&gt;</a></li>
                 </ul>
             </div>
-            <form action="list" method="get" id="boardSearch">
+            <form action="list" method="get" id="boardSearch" onsubmit="return searchValidate()">
                 <input type="hidden" name="type" value="${param.type}">
                 <select name="key">
                     <option value="t">제목</option>

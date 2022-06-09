@@ -1,0 +1,13 @@
+package edu.kh.SemiProject.board.model.service;
+
+import static edu.kh.SemiProject.common.JDBCTemplate.*;
+
+
+import edu.kh.SemiProject.board.model.dao.BoardDAO;
+
+public class BoardService {
+
+	private BoardDAO dao = new BoardDAO();
+	
+	public 
+}

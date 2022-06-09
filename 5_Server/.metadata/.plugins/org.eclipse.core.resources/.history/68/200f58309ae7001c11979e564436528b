@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>board-sql.xml</comment>
+<entry key="mainBoardSelect">
+SELECT BOARD_NO,BOARD_TITLE,TO_CHAR(머시기머시기),(댓글 카운트),(좋아요 카운트)
+FROM BOARD
+JOIN LIKE USING(BOARD_NO)
+JOIN REPLY USING(BOARD_NO)
+WHERE BOARD_TYPE = 생각을 좀 더 해봐야겠따
+</entry>
+
+</properties>

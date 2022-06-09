@@ -154,11 +154,13 @@ nav>div:last-child>button:hover{
 
 .announcement{
     height: 70px;
+    width: 100%;
     display: flex;
     align-items: center;
     margin:12px 0;
 }
 .announcement>div:first-child{
+    
     flex-basis: 17.5%;
     background-color: #f1a40c;
     display: flex;
@@ -167,6 +169,7 @@ nav>div:last-child>button:hover{
     align-items: center;
     border-radius: 27px;
 }
+
 .announcement>div:first-child>a{
     font-family: '잘난체';
     color: white;
@@ -176,11 +179,29 @@ nav>div:last-child>button:hover{
     height: 100%;
     letter-spacing: +8px;
 }
+.announcement>div:last-child{
+    display: flex;
+    width: 70%;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.announcement>div:last-child>span{
+    text-align: center;
+    font-family: '잘난체';
+    line-height: 70px;
+    font-size: 14px;
+    letter-spacing: -0.6px;
+    color : rgb(159, 159, 159);
+    width: 100px;
+}
+
 .announcement>div:last-child>a{
+    line-height: 70px;
     width: 60%;
+    text-align: center;
     font-size: 22px;
     font-family: '수성돋움체';
-    margin-left: 90px;
 }   
 
 
@@ -207,6 +228,8 @@ nav>div:last-child>button:hover{
     background-color: #f1a40c;
 }
 .hot-board>div>ul>li{
+    display: flex;
+    justify-content: space-between;
     padding-left: 30px;
     margin-top: 11px;
     margin-left: 30px;
@@ -241,6 +264,8 @@ nav>div:last-child>button:hover{
     background-color: #f1a40c;
 }
 .new-board>div>ul>li{
+    display: flex;
+    justify-content: space-between;
     padding-left: 30px;
     margin-top: 11px;
     margin-left: 30px;
@@ -275,6 +300,8 @@ nav>div:last-child>button:hover{
     background-color: #f1a40c;
 }
 .exercise-board>div>ul>li{
+    display: flex;
+    justify-content: space-between;
     padding-left: 30px;
     margin-top: 11px;
     margin-left: 30px;
@@ -309,6 +336,8 @@ nav>div:last-child>button:hover{
     background-color: #f1a40c;
 }
 .free-board>div>ul>li{
+    display: flex;
+    justify-content: space-between;
     padding-left: 30px;
     margin-top: 11px;
     margin-left: 30px;
@@ -343,6 +372,8 @@ nav>div:last-child>button:hover{
     padding:0;
 }
 .met-board>div:last-child>ul>li{
+    display: flex;
+    justify-content: space-between;
     padding-left: 30px;
     margin-right: 40px;
     margin-bottom: 9px;

@@ -1,0 +1,21 @@
+package edu.kh.SemiProject.board.model.vo;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
+public class ShowWindowInfo {
+	
+	private int boardNo;
+	private String boardTitle;
+	private String memberNick
+	private int likeCount;
+	
+	private int replyCount;
+	private String date;
+}

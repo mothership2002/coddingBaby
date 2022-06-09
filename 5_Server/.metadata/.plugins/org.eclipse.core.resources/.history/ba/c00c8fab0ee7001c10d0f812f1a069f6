@@ -1,0 +1,17 @@
+package edu.kh.SemiProject.board.model.dao;
+
+import static edu.kh.SemiProject.common.JDBCTemplate.*;
+
+import java.sql.Connection;
+import java.util.List;
+
+import edu.kh.SemiProject.board.model.vo.ShowWindowInfo;
+
+public class BoardDAO {
+
+	public List<ShowWindowInfo> mainBoardSelect(Connection conn) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

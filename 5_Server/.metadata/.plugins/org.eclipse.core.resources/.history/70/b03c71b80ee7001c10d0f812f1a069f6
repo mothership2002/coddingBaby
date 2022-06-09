@@ -1,0 +1,22 @@
+package edu.kh.SemiProject.board.model.dao;
+
+import static edu.kh.SemiProject.common.JDBCTemplate.*;
+
+import java.sql.Connection;
+import java.util.List;
+
+import edu.kh.SemiProject.board.model.vo.ShowWindowInfo;
+
+public class BoardDAO {
+
+	public List<ShowWindowInfo> mainBoardSelect(Connection conn) throws Exception {
+		List<ShowWindowInfo> result = null;
+		try {
+			
+		} finally {
+			// TODO: handle finally clause
+		}
+		return null;
+	}
+
+}
