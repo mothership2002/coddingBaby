@@ -1,8 +1,0 @@
-package edu.kh.SemiProject.board.model.dao;
-
-import static edu.kh.SemiProject.common.JDBCTemplate.*;
-
-
-public class BoardDAO {
-
-}

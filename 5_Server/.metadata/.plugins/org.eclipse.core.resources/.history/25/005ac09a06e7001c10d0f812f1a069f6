@@ -1,5 +1,0 @@
-package edu.kh.SemiProject.board.controller;
-
-public class MainBoardController extends http{
-
-}

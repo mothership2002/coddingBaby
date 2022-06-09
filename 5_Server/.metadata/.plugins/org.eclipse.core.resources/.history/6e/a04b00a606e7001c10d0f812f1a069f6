@@ -1,9 +1,0 @@
-package edu.kh.SemiProject.board.controller;
-
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-
-@WebServlet("/index.jsp")
-public class MainBoardController extends HttpServlet{
-
-}

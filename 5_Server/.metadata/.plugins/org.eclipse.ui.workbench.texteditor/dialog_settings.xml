@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="member"/>
+		<item key="selection" value="Member"/>
 		<list key="findhistory">
+			<item value="User"/>
 			<item value="user"/>
 			<item value="member"/>
 			<item value="context"/>
@@ -17,6 +18,7 @@
 			<item value="test"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Member"/>
 			<item value="member"/>
 		</list>
 	</section>
